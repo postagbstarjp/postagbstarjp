@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="メーザーの速度超過を示す17天体の赤外線SEDを、球対称の塵を仮定したDUSTYモデルで検討。7天体の良好な再現と変光の情報から、星周構造が変わり始める初期のウォーターファウンテン候補を探った2026年ApJ論文を紹介します。">
+  <title>星を包むガスが形を変え始めるとき｜中島淳一</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="research-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="../../" aria-label="中島淳一 ホーム">
+        <span lang="ja">中島淳一</span>
+        <span lang="en">Jun-ichi Nakashima</span>
+      </a>
+      <p class="site-description">Astronomy, notes &amp; essays</p>
+    </div>
+  </header>
+
+  <main id="main" class="research-main">
+    <nav class="article-nav" aria-label="現在の位置"><a href="../../">ホーム</a><span aria-hidden="true"> / </span><span>研究成果</span></nav>
+    <article aria-labelledby="article-title">
+      <header class="article-header">
+        <p class="eyebrow" lang="en">Research / Infrared SED modeling</p>
+        <p class="article-date">記事公開日：<time datetime="2026-10-18">2026年10月18日</time></p>
+        <h1 id="article-title">星を包むガスが形を変え始めるとき</h1>
+        <p class="article-subtitle">メーザーの速度と赤外線の光から、変化の始まりを探る</p>
+        <p class="article-lead">星を包むガスの内側で、新しい流れが生まれ始めていても、外側はまだ丸い姿を保っているかもしれません。そのような変化の始まりを捉えるために、私たちはガスの速度に加え、星の周囲の塵が放つ赤外線を調べました。球対称の単純なモデルで光の分布を説明できるかを問い、ウォーターファウンテン現象のごく初期の候補を探った研究です。</p>
+        <p class="paper-status">The Astrophysical Journal, 998, 27（2026）に掲載<br><a href="https://doi.org/10.3847/1538-4357/ae2fe9">原著論文を読む（出版社）</a></p>
+      </header>
+
+      <div class="article-body">
+        <section aria-labelledby="background">
+          <h2 id="background">ガスの動きから、星を包む構造へ</h2>
+          <p>太陽のような低・中質量の星は、晩年のAGB（漸近巨星分枝）星の時期にガスや塵を放出し、星周エンベロープと呼ばれる層をつくります。あらゆる方向へほぼ同じように物質を放つ球対称の姿から、post-AGB星、そして惑星状星雲へと進む間に、方向によって形が大きく異なる構造へ変わることがあります。</p>
+          <p>この変化を考えるうえで注目されるのが、ウォーターファウンテン天体です。進化した星の周囲で、互いに反対の二方向へ細く速い分子ガスの流れ、双極ジェットが見られる天体を指します。水分子のH₂Oメーザーという、特定の条件で増幅された電波がジェットを調べる手がかりです。液体の水が噴き出す現象ではありません。ただし、既知の天体がすべて同じ進化段階にあるとは限りません。</p>
+          <p>私たちはまず、<a href="../water-fountain-candidates/">Fanほか（2024）の研究</a>でOH 1612 MHzとH₂O 22.235 GHzメーザーを、次に<a href="../oh-mainline-velocity-excess/">Xieほか（2025）の研究</a>でOHの1612 MHz衛星線と1665・1667 MHz主線を比べました。通常の球対称膨張の目安となるOH衛星線の速度範囲から、別のメーザー放射が外にはみ出す「速度超過」を探す方法です。測っているのは視線に沿った速度であり、これだけでジェットの形まで分かるわけではありません。</p>
+          <p>今回の第三段階では、見つけた天体の周囲がどのような状態にあるかへ問いを進めました。内側に球対称膨張から外れる動きがある一方、外側の塵はまだほぼ球対称なら、変形が全体へ広がる前の段階かもしれません。これは、今回の解析で検討する作業仮説です。</p>
+        </section>
+
+        <section aria-labelledby="method">
+          <h2 id="method">さまざまな波長の光を、一つのモデルと比べる</h2>
+          <p>その手がかりが、スペクトルエネルギー分布（SED）です。さまざまな波長で測った天体の明るさを、一つの図にまとめたものと考えると分かりやすいでしょう。中心星の光に加え、塵がその光を吸収して赤外線として放ち直す効果も現れるため、塵の性質や分布を調べられます。</p>
+          <p>対象は、Fanほかの11天体とXieほかの8天体から、両方に含まれる2天体を除いた17天体です。公開アーカイブの可視光から遠赤外線までの測光データを集め、対応天体を確認し、星との間にある塵によって光が弱まる「星間減光」も補正しました。短い波長では近くの別の星を取り違える可能性もあり、データの点検が欠かせません。</p>
+          <p>用いたのは放射輸送コードDUSTYです。中心星の周囲に球対称の塵のエンベロープを置き、光の吸収・散乱・再放射を計算します。本研究では塵の組成や密度分布などに仮定を置き、中心星の有効温度、塵の内縁温度、光の通りにくさを表す光学的厚さを変えて、観測SEDと比較しました。1次元モデルというのは、方向による違いを設けず、中心からの距離に沿って構造を扱うことを意味します。</p>
+          <p>狙いは、複雑な形を最初から描くことではなく、この単純なモデルがどこまで観測を説明できるかを確かめることです。合い方を数値と目視で評価することで、星周塵の構造を考える共通の物差しにしました。</p>
+          <figure id="figure-2" class="research-figure">
+            <a href="./images/sed-oh-mainlines.webp" aria-label="論文図2：OH主線の速度超過天体のSEDを拡大表示">
+              <img src="./images/sed-oh-mainlines.webp" width="2087" height="2633" loading="lazy" alt="OH主線の速度超過で選ばれた8天体のSEDと黒いDUSTYモデル曲線。右上のIRAS 17579-3121には二つの山が見える。横軸は波長、縦軸は波長ごとの放射エネルギーを対数で示す。">
+            </a>
+            <figcaption><span class="figure-number">論文図2</span>Xieほか（2025）で選ばれた8天体のSED。青丸は星間減光の補正前、赤四角と緑三角は異なる減光則による補正後のデータ、黒線はDUSTYモデルです。補正は8 μmより短い波長に適用しています。右上のIRAS 17579-3121では、短波長と長波長の二つの山をよく再現できました。一方、黒線と観測点のずれが大きい天体もあります。補正前の青丸ではなく、補正後の点との対応に注目してください。各パネルの天体名や目盛りは、画像を拡大して確認できます。<span class="figure-source">出典：Xieほか（2026）、CC BY 4.0。<a href="#figure-credit">図の出典</a><a href="./images/sed-oh-mainlines.webp">拡大する</a></span></figcaption>
+          </figure>
+        </section>
+
+        <section aria-labelledby="results">
+          <h2 id="results">17天体のうち、7天体の光を再現</h2>
+          <p>球対称のDUSTYモデルでSEDをよく再現できたのは7天体でした。残る10天体では、十分な再現が得られませんでした。速度超過を示す天体の中にも、外側の塵の分布がまだおおむね球対称である可能性を持つものが存在する、という結果です。</p>
+          <p>良好なフィットのうち、IRAS 19052+0922、19068+1127、19229+1708、19422+3506、22516+0838の5天体は、SEDが一つの大きな山をつくる単峰型でした。これは、塵の層がまだ中心星の近くにある、AGB星に典型的な特徴に対応します。</p>
+          <p>残るIRAS 17579-3121とIRAS 19319+2214の2天体は双峰型です。短い波長側には中心星の光、長い波長側には星から離れた冷たい塵の再放射が現れ、二つの山をつくります。post-AGB星によく見られる形ですが、単峰型・双峰型だけで進化段階を決めることはできません。</p>
+          <figure id="figure-3" class="research-figure">
+            <a href="./images/sed-water-masers.webp" aria-label="論文図3：H2Oメーザーで選ばれた天体のSEDを拡大表示">
+              <img src="./images/sed-water-masers.webp" width="2090" height="3249" loading="lazy" alt="Fanほかの探索に由来する9天体のSED。右上のIRAS 19052+0922や右列3段目のIRAS 19229+1708などで、補正後の観測点と黒いモデル曲線がよく対応する。">
+            </a>
+            <figcaption><span class="figure-number">論文図3</span>Fanほか（2024）の探索に由来する天体のSED。記号は論文図2と同じです。上段右のIRAS 19052+0922、3段目右のIRAS 19229+1708など、単峰型の良好なフィットが含まれます。4段目左のIRAS 19319+2214は双峰型です。図2と図3を合わせて重複のない17天体を示しており、先行研究で両方の標本に属した2天体は図2に含まれます。パネルごとに縦軸の範囲が異なるため、山の高さそのものを天体間で比べる図ではありません。<span class="figure-source">出典：Xieほか（2026）、CC BY 4.0。<a href="#figure-credit">図の出典</a><a href="./images/sed-water-masers.webp">拡大する</a></span></figcaption>
+          </figure>
+          <p>ただし、よく合うモデルが見つかっても、完全な球対称性の証明にはなりません。小さなジェットや、星の赤道面に沿うドーナツ状の構造であるトーラスがあっても、全体の光への寄与が小さければ、1次元モデルで近似できる場合があります。反対に、合わない原因も非球対称構造だけとは限りません。星間減光の補正や測光の不確かさ、対応天体の取り違え、塵の性質とモデルの単純化を考慮する必要があります。10天体すべての非球対称性やジェットを直接確認した、という意味ではありません。</p>
+        </section>
+
+        <section aria-labelledby="colors">
+          <h2 id="colors">赤外線の色と、明るさの変化を重ねる</h2>
+          <p>異なる波長の明るさの比を「色」として比べると、良好なフィットの天体は主にAGB星に対応する領域に、フィットが悪い天体はpost-AGB星に対応する領域に多く分布しました。星の進化とともに星周構造が複雑になるという描像と整合的です。ただし、これは標本全体の傾向で、例外もあります。色の領域は、個々の天体の進化段階を確定する境界ではありません。</p>
+          <figure id="figure-4" class="research-figure">
+            <a href="./images/infrared-fit-colors.webp" aria-label="論文図4：SEDフィットの良否と赤外線色を拡大表示">
+              <img src="./images/infrared-fit-colors.webp" width="1744" height="1714" loading="lazy" alt="IRAS二色図。良好なフィットは赤い塗りつぶし記号、不十分なフィットは白抜き記号。灰色のAGB星領域と桃色のpost-AGB星領域、既知のウォーターファウンテンとの比較を示す。">
+            </a>
+            <figcaption><span class="figure-number">論文図4</span>赤外線色とSEDの再現性を比べた図。四角はXieほか（2025）、丸はFanほか（2024）に由来する天体で、赤い塗りつぶしが良好、白抜きが不十分なフィットです。三角は主にYungほか（2017）による既知のウォーターファウンテンの結果、菱形は今回追加解析した既知の2天体を示します。灰色・桃色の輪郭はそれぞれAGB星・post-AGB星の比較標本の領域です。黒い区分線はvan der Veen &amp; Habing（1988）、LI・RIはSevenster（2002）によります。これらの領域は進化段階の厳密な判定線ではありません。<span class="figure-source">出典：Xieほか（2026）、CC BY 4.0。<a href="#figure-credit">図の出典</a><a href="./images/infrared-fit-colors.webp">拡大する</a></span></figcaption>
+          </figure>
+          <p>もう一つの手がかりが変光です。IRASの変光指標を調べ、WISE・NEOWISE-Rの観測から光度曲線をつくって周期性を解析しました。今回新たに周期を求めた3天体は、IRAS 19052+0922が644.7日、IRAS 19067+0811が2008.0日、IRAS 19068+1127が662.9日でした。先行研究で報告済みの周期とは区別した結果です。</p>
+          <p>このうち19052+0922と19068+1127は、SEDをよく再現できた7天体にも含まれます。一方、19067+0811では良好なSEDフィットは得られていません。周期的な明るさの変化は、脈動するAGB星としての性質を支持しますが、それだけで分類が確定するわけではありません。また、光度曲線のデータが足りない天体を、周期変動がないと判断することもできません。</p>
+          <figure id="figure-5" class="research-figure">
+            <a href="./images/wise-periods.webp" aria-label="論文図5：3天体の光度曲線と周期解析を拡大表示">
+              <img src="./images/wise-periods.webp" width="1841" height="1604" loading="lazy" alt="3天体のWISE光度曲線と周期解析。上からIRAS 19052+0922、19067+0811、19068+1127。右列の採用周期は644.7日、2008.0日、662.9日。">
+            </a>
+            <figcaption><span class="figure-number">論文図5</span>左列はWISEのW2帯での明るさの時間変化、右列は周期ごとの信号の強さです。赤い曲線は正弦曲線の当てはめ、黒い縦線は誤差を示し、右の赤い×印が採用したピークです。水平破線は偽警報確率2%に対応する基準で、ノイズによる見かけの周期信号を評価するために使います。中央のIRAS 19067+0811では、周期変動が検出されても球対称モデルでSEDを十分に説明できませんでした。変光と塵の構造は、異なる情報を与えます。<span class="figure-source">出典：Xieほか（2026）、CC BY 4.0。<a href="#figure-credit">図の出典</a><a href="./images/wise-periods.webp">拡大する</a></span></figcaption>
+          </figure>
+        </section>
+
+        <section aria-labelledby="outlook">
+          <h2 id="outlook">外側が変わる前に、内側で何が起きているのか</h2>
+          <p>速度超過の大きさと良好なSEDフィットを合わせて、論文では特にIRAS 19229+1708とIRAS 19052+0922に注目しました。19229+1708のH₂Oメーザーは、OH衛星線の範囲から約34.3 km/sの速度超過を示します。ただし、この星には赤色超巨星（RSG）という先行研究の分類もあります。低・中質量星のAGB進化に属する天体だと決めつけることはできません。</p>
+          <p>19052+0922では、こちらへ近づく青方偏移側に約20.4 km/sの速度超過があり、上で述べた周期変動も検出されています。これらの観測事実は、外側の塵のエンベロープがまだ大きく変形していないうちに、内側で特殊な運動が始まっている可能性を考える手がかりです。</p>
+          <p>この2天体は、極めて初期のウォーターファウンテン現象を示している可能性がある候補として指摘されました。若いジェットを2個確定したわけではありません。球対称の外層の内側にジェットやトーラスが生まれ、変化が外へ及ぶという描像は、結果と整合する仮説です。形成の順序や空間構造を今回実証したものではなく、高角分解能の電波干渉計観測や赤外線観測で、放射位置と運動を確かめる必要があります。</p>
+          <p>メーザーはガスの運動を、SEDは塵の分布を、光度曲線は星の変動を伝えます。異なる手がかりを重ねることで、速度の違いから選んだ候補の、その先へ進めます。星を包む物質が大きく形を変える前に、内側ではすでに変化が始まっているのかもしれません。その小さな始まりを見極めることが、次の観測への問いです。</p>
+        </section>
+      </div>
+
+      <aside class="paper-information" aria-labelledby="paper-title">
+        <p class="eyebrow" lang="en">Paper</p>
+        <h2 id="paper-title">論文情報</h2>
+        <p class="paper-name" lang="en">Infrared Spectral Energy Distribution Modeling of Velocity Excess in Maser Sources: Identifying Incipient Water Fountain Candidates</p>
+        <p lang="en">Jia-Yong Xie, Jun-ichi Nakashima, and Yong Zhang</p>
+        <p><span lang="en">The Astrophysical Journal, Volume 998, Article 27</span>（2026）<br>論文出版日：2026年2月2日（出版社表示）<br>DOI：<a href="https://doi.org/10.3847/1538-4357/ae2fe9">10.3847/1538-4357/ae2fe9</a></p>
+        <p><a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...998...27X/abstract">NASA/ADS</a> ／ <a href="https://arxiv.org/abs/2512.16209">arXiv:2512.16209</a></p>
+        <p class="paper-note">上記は原著論文の出版日です。論文名は採択稿の表記ではなく、出版社の最終出版タイトルを記載しています。</p>
+        <p id="figure-credit" class="paper-note">図の出典：Xie, Nakashima &amp; Zhang（2026）、上記論文の図2・3・4・5。© 2026 The Author(s). Published by the American Astronomical Society. <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae2fe9">出版社の権利表示</a>に基づき、<a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0（CC BY 4.0）</a>の条件で掲載しています。著者提供ZIPの原図をWebPに変換し、白い外周余白のみを整理して日本語の説明を添えました。全パネルを掲載し、軸・ラベル・凡例・色・記号を保持しています。</p>
+      </aside>
+      <nav class="article-return" aria-label="ホームへの案内"><a href="../../">← ホームに戻る</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="copyright">&copy; Jun-ichi Nakashima</p></div></footer>
+</body>
+</html>
