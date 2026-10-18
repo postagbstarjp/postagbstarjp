@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="天文学者・中島淳一（中山大学教授）の個人サイト。星の晩年と天体メーザーの研究、各地での研究教育歴、代表論文、科学や大学教育をめぐる対談・音声配信を紹介します。">
   <title>中島淳一｜天文学・研究成果とプロフィール</title>
-  <link rel="stylesheet" href="./styles.css?v=water-fountain-20261018">
+  <link rel="stylesheet" href="./styles.css?v=editorial-refined-20261018">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">本文へ移動</a>
 
   <header class="site-header">
@@ -16,11 +16,17 @@
         <span lang="ja">中島淳一</span>
         <span lang="en">Jun-ichi Nakashima</span>
       </a>
-      <p class="site-description">Astronomy, notes &amp; essays</p>
+      <p class="site-description" lang="en">Research · Teaching · Archive</p>
+      <nav class="home-nav" aria-label="主なコンテンツ">
+        <a href="#research">研究成果</a>
+        <a href="#teaching">教育・講義</a>
+        <a href="#writing">発信・文章</a>
+        <a href="./profile/">プロフィール</a>
+      </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="intro" aria-labelledby="intro-title">
       <div class="intro-heading">
         <p class="eyebrow">Astronomer</p>
@@ -30,8 +36,9 @@
         </h1>
       </div>
 
+      <p class="lead intro-lead">電波天文学を専門に、進化した星の周囲に広がる分子ガスや天体メーザーを研究しています。</p>
+
       <div class="intro-body">
-        <p class="lead">電波天文学を専門に、進化した星の周囲に広がる分子ガスや天体メーザーを研究しています。</p>
         <p>現在は、中国・珠海の中山大学 物理与天文学院の教授として、研究と大学・大学院での教育に携わっています。日本で博士号を取得した後、米国のイリノイ大学、台湾の中央研究院、香港大学、ロシアのウラル連邦大学で研究を続けてきました。</p>
         <p>一つの天体を長く観測することと、メーザーのデータベースから新しい観測対象を探すこと。その両方を通じて、星が宇宙に物質を放出する過程を調べています。</p>
         <p>研究の傍ら、科学の面白さや海外での研究生活、大学教育・研究文化について、文章やVoicyの音声番組で発信しています。</p>
@@ -39,20 +46,16 @@
       </div>
     </section>
 
-    <div class="divider" role="presentation" aria-hidden="true">
-      <span></span>
-    </div>
-
-    <section class="research-section" aria-labelledby="research-title">
+    <section id="research" class="research-section" aria-labelledby="research-title">
       <div>
-        <p class="eyebrow">Research</p>
+        <p class="eyebrow"><span class="section-number" aria-hidden="true">01</span> Research</p>
         <h2 id="research-title">研究成果</h2>
       </div>
       <!-- Research entries follow paper publication year/date, newest first. -->
       <div class="research-entries">
-        <div class="research-entry">
+        <div class="research-entry research-featured">
           <p class="entry-date"><time datetime="2026-10-17">2026年10月17日</time> · 研究紹介</p>
-          <h3><a href="./research/sio-linewidth-agb-rsg/">珍しい星を探す、電波と光の手がかり</a></h3>
+          <h3><a href="./research/sio-linewidth-agb-rsg/"><span class="title-phrase">珍しい星を探す、</span><wbr><span class="title-phrase">電波と光の手がかり</span></a></h3>
           <p>星の周囲から届く電波の線幅と光度を組み合わせ、次に詳しく調べる天体を選ぶ手がかりを提案しました。</p>
           <p class="entry-status">The Astrophysical Journalに掲載決定</p>
         </div>
@@ -70,7 +73,7 @@
         </div>
         <div class="research-entry">
           <p class="entry-date">2025年の論文 · 研究紹介</p>
-          <h3><a href="./research/oh-mainline-velocity-excess/">三つの電波で探る、星を包むガスの動き</a></h3>
+          <h3><a href="./research/oh-mainline-velocity-excess/"><span class="title-phrase">三つの電波で探る、</span><wbr><span class="title-phrase">星を包むガスの動き</span></a></h3>
           <p>OHメーザーの主線と衛星線の速度範囲を比べ、星周ガスの複雑な運動と、星の進化を探りました。</p>
           <p class="entry-status">The Astrophysical Journal, 978, 114（2025）</p>
         </div>
@@ -83,14 +86,14 @@
       </div>
     </section>
 
-    <section class="education-section" aria-labelledby="education-title">
+    <section id="teaching" class="education-section" aria-labelledby="education-title">
       <div>
-        <p class="eyebrow" lang="en">Teaching</p>
+        <p class="eyebrow" lang="en"><span class="section-number" aria-hidden="true">02</span> Teaching</p>
         <h2 id="education-title">教育・講義</h2>
       </div>
       <div class="education-entries">
         <div class="education-entry">
-          <h3><a href="./education/modern-astrophysics/">天文学研究への入り口：近代天体物理</a></h3>
+          <h3><a href="./education/modern-astrophysics/"><span class="title-phrase">天文学研究への入り口：</span><wbr><span class="title-phrase">近代天体物理</span></a></h3>
           <p>異なる専門分野から天文学研究へ進む大学院新入生のために。観測量を物理の原理から理解し、英語で研究を説明し、問いを立てる基礎を紹介します。</p>
         </div>
         <div class="education-entry">
@@ -98,30 +101,19 @@
           <p>アンテナが受け取った波は、どう画像やスペクトルになるのでしょうか。中山大学で担当する講義で大切にしている、物理と数学から観測を理解する道筋を紹介します。</p>
         </div>
         <div class="education-entry">
-          <h3><a href="./education/astronomical-data-analysis/">観測データから宇宙を読み解く：天文データ解析実習</a></h3>
+          <h3><a href="./education/astronomical-data-analysis/"><span class="title-phrase">観測データから宇宙を読み解く：</span><wbr><span class="title-phrase">天文データ解析実習</span></a></h3>
           <p>学部生がVLAの実観測データを点検・較正し、画像やスペクトルから物理を考察する実習。自分の判断を検証し、英語の科学レポートにまとめる研究体験を紹介します。</p>
         </div>
         <div class="education-entry">
-          <h3><a href="./education/astronomy-frontiers/">教科書の先にある宇宙：天文学・宇宙科学の最前線</a></h3>
+          <h3><a href="./education/astronomy-frontiers/"><span class="title-phrase">教科書の先にある宇宙：</span><wbr><span class="title-phrase">天文学・宇宙科学の最前線</span></a></h3>
           <p>学部1年生が、さまざまな分野の研究者から未解決の宇宙の問題を知る講義。星の晩年と天体メーザーを例に、これからの学びと研究のつながりを紹介します。</p>
         </div>
       </div>
     </section>
 
-    <section class="about-site" aria-labelledby="about-title">
-      <div>
-        <p class="eyebrow">About this site</p>
-        <h2 id="about-title">この場所について</h2>
-      </div>
-      <div class="about-body">
-        <p>このサイトは、これまでの研究活動や公表済みの成果を整理し、論文の内容や研究の背景を紹介するための個人サイトです。</p>
-        <p>研究の足跡を残す書庫であるとともに、専門外の方にも研究の面白さや意義を知っていただくための場所として使っていこうと考えています。</p>
-      </div>
-    </section>
-
     <section class="links-section" aria-label="発信・文章と研究者プロフィール">
-      <div class="link-group">
-        <p class="eyebrow">Writing &amp; audio</p>
+      <div id="writing" class="link-group">
+        <p class="eyebrow"><span class="section-number" aria-hidden="true">03</span> Writing &amp; audio</p>
         <h2>発信・文章</h2>
         <ul class="external-links media-links">
           <li>
@@ -143,8 +135,8 @@
         </ul>
       </div>
 
-      <div class="link-group">
-        <p class="eyebrow">Profiles</p>
+      <div id="profiles" class="link-group">
+        <p class="eyebrow"><span class="section-number" aria-hidden="true">04</span> Profile</p>
         <h2>研究者プロフィール</h2>
         <p><a href="./profile/">このサイトのプロフィール</a>に、略歴・研究活動・代表論文と対談をまとめています。外部の公式情報や論文一覧もあわせてご覧いただけます。</p>
         <ul class="external-links">
@@ -157,10 +149,21 @@
         </ul>
       </div>
     </section>
+    <section class="about-site" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">About this site</p>
+        <h2 id="about-title">この場所について</h2>
+      </div>
+      <div class="about-body">
+        <p>このサイトは、これまでの研究活動や公表済みの成果を整理し、論文の内容や研究の背景を紹介するための個人サイトです。</p>
+        <p>研究の足跡を残す書庫であるとともに、専門外の方にも研究の面白さや意義を知っていただくための場所として使っていこうと考えています。</p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
+      <a class="back-to-top" href="#main">ページの先頭へ <span aria-hidden="true">↑</span></a>
       <p class="copyright"><span aria-hidden="true">©</span> Jun-ichi Nakashima</p>
     </div>
   </footer>
