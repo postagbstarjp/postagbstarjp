@@ -1,0 +1,20 @@
+/* Only this article extends the existing research-page styles. */
+.database-article { scroll-behavior: auto; }
+.database-article section, .database-article h2 { scroll-margin-top: 1.5rem; }
+.research-message { max-width: 43rem; margin: 2.3rem auto; padding: 0.1rem 0 0.1rem 1.5rem; border-left: 1px solid var(--line); }
+.research-message p:first-child { margin-bottom: 0.8rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; line-height: 1.8; letter-spacing: 0.015em; }
+.research-message p:last-child { margin-bottom: 0; color: var(--muted); font-size: 0.85rem; }
+.talk-title { font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; line-height: 1.7; overflow-wrap: anywhere; }
+.talk-title span { display: block; margin-top: 0.5rem; color: var(--muted); font-size: 0.92rem; }
+.source-list { margin: 0; padding: 0; list-style: none; }
+.source-list li { padding-bottom: 1.4rem; }
+.source-list li + li { padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.source-list li p { margin: 0.65rem 0 0; }
+.source-list li > p:first-child { margin: 0 0 0.65rem; }
+.source-list cite { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 1rem; font-style: normal; line-height: 1.7; overflow-wrap: anywhere; }
+.source-list .paper-note { overflow-wrap: anywhere; }
+.database-article .article-return { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; }
+@media (max-width: 540px) {
+  .research-message { padding-left: 1rem; }
+  .research-message p:first-child { font-size: 1.05rem; }
+}
