@@ -1,0 +1,68 @@
+/* Profile only: shared typography and colours come from ../styles.css. */
+.profile-page { scroll-behavior: auto; }
+.profile-main { max-width: 1040px; }
+.profile-header { max-width: 43rem; padding: 70px 0 48px; }
+.profile-header .eyebrow { margin-bottom: 1.5rem; }
+.profile-header h1 { font-size: clamp(2rem, 3.6vw, 3rem); }
+.profile-name { margin: 1.8rem 0 0.4rem; font-size: 1.2rem; }
+.profile-name span { margin-left: 1em; color: var(--muted); font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.06em; }
+.profile-affiliation { margin-bottom: 2.5rem; color: var(--muted); font-size: 0.86rem; }
+.profile-lead { font-size: clamp(1.2rem, 2.2vw, 1.5rem); line-height: 1.95; }
+.profile-header > p:last-child { margin-bottom: 0; }
+.profile-contents { display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem; padding: 1.3rem 0; border-block: 1px solid var(--line); font-size: 0.85rem; }
+.profile-main a { text-decoration-color: #9aa6a9; }
+.profile-main section, .profile-main h2 { scroll-margin-top: 1.5rem; }
+.profile-section { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; padding: 70px 0; border-bottom: 1px solid var(--line); }
+.profile-section-heading .eyebrow { margin-bottom: 1.4rem; }
+.profile-section h2 { margin-bottom: 0; font-size: 1.65rem; font-weight: 500; line-height: 1.8; letter-spacing: 0.08em; }
+.profile-section-body { min-width: 0; }
+.profile-section-body > p { margin-bottom: 1.5em; }
+.profile-section-body > :last-child { margin-bottom: 0; }
+.profile-section h3 { margin: 0 0 0.8rem; font-size: 1.1rem; font-weight: 500; line-height: 1.85; }
+.profile-source { display: block; color: var(--muted); font-family: var(--sans); font-size: 0.75rem; line-height: 1.95; }
+.profile-related { margin-top: 2rem; font-size: 0.85rem; }
+.profile-timeline { margin: 2rem 0 2.4rem; }
+.profile-timeline > div { display: grid; grid-template-columns: 135px minmax(0, 1fr); gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+.profile-timeline > div:first-child { border-top: 1px solid var(--line); }
+.profile-timeline dt { padding-top: 0.12rem; color: var(--muted); font-family: var(--sans); font-size: 0.79rem; letter-spacing: 0.02em; }
+.profile-timeline dd { margin: 0; font-size: 0.9rem; }
+.timeline-detail { display: block; color: var(--muted); font-family: var(--sans); font-size: 0.76rem; }
+.profile-distinction { margin: 2.5rem 0 1.8rem; padding-left: 1.3rem; border-left: 1px solid var(--line); }
+.profile-distinction p { margin-bottom: 0; }
+.profile-papers, .profile-conversations { margin: 2.2rem 0 0; padding: 0; list-style: none; }
+.profile-papers > li + li, .profile-conversations > li + li { margin-top: 2.2rem; padding-top: 2.2rem; border-top: 1px solid var(--line); }
+.paper-period, .conversation-date { margin: 0 0 0.7rem; color: var(--accent); font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.04em; }
+.profile-papers h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.12rem; line-height: 1.65; letter-spacing: 0.015em; overflow-wrap: anywhere; }
+.citation-authors, .citation-journal { margin: 0 0 0.6rem; color: var(--muted); font-family: var(--sans); font-size: 0.76rem; line-height: 1.9; letter-spacing: 0.015em; overflow-wrap: anywhere; }
+.profile-papers li > p:last-child { margin: 1rem 0 0; font-size: 0.91rem; }
+.profile-conversations li > p { margin-bottom: 0.8rem; }
+.profile-conversations li > p:last-child { margin-bottom: 0; }
+.conversation-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; font-size: 0.85rem; }
+.profile-return { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 30px 0; font-size: 0.8rem; }
+.profile-updated { margin: 0 0 65px; color: var(--muted); font-family: var(--sans); font-size: 0.7rem; }
+
+@media (max-width: 960px) {
+  .profile-section { grid-template-columns: 1fr; gap: 2rem; padding: 60px 0; }
+  .profile-section h2 br { display: none; }
+}
+@media (max-width: 540px) {
+  .profile-header { padding: 48px 0 35px; }
+  .profile-name span { display: block; margin: 0.2rem 0 0; }
+  .profile-affiliation { margin-bottom: 2rem; font-size: 0.78rem; }
+  .profile-break { display: none; }
+  .profile-contents { gap: 0.65rem 1.3rem; font-size: 0.8rem; }
+  .profile-section { padding: 48px 0; }
+  .profile-section h2 { font-size: 1.45rem; }
+  .profile-timeline > div { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.85rem 0; }
+  .profile-section h3 { font-size: 1.04rem; }
+  .profile-papers h3 { font-size: 1.06rem; }
+  .profile-distinction { padding-left: 1rem; }
+}
+
+@media print {
+  .profile-contents, .profile-return { display: none; }
+  .profile-header { padding-top: 25px; }
+  .profile-section { display: block; padding-block: 30px; }
+  .profile-section-heading { margin-bottom: 1.5rem; }
+  .profile-papers > li, .profile-conversations > li, .profile-timeline > div { break-inside: avoid; }
+}
