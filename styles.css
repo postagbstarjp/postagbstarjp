@@ -565,3 +565,22 @@ h1 span[lang="en"] {
   padding-top: 2.5rem;
   border-top: 1px solid var(--line);
 }
+
+/* Research entries share one column; article figures retain their original colors. */
+.research-entries .research-entry + .research-entry {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.water-fountain-page .wf-concepts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin: 2.8rem 0;
+}
+.water-fountain-page .wf-concepts .research-figure { margin: 0; }
+.water-fountain-page .wf-histogram { max-width: 640px; margin-inline: auto; }
+.water-fountain-page .paper-information { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .water-fountain-page .wf-concepts { grid-template-columns: 1fr; gap: 2rem; }
+}
