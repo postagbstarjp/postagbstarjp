@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中山大学の学部生向け「天文观测数据与处理」で担当する電波天文学実習を紹介します。VLAの実観測データを点検・較正し、画像とスペクトルから星周ガスを考察して、英語の科学レポートにまとめる研究体験です。">
+  <title>観測データから宇宙を読み解く――天文データ解析実習｜中島淳一</title>
+  <link rel="stylesheet" href="../../styles.css?v=20261018-education-2">
+</head>
+<body class="education-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="../../" aria-label="中島淳一 ホーム">
+        <span lang="ja">中島淳一</span>
+        <span lang="en">Jun-ichi Nakashima</span>
+      </a>
+      <p class="site-description">Astronomy, notes &amp; essays</p>
+    </div>
+  </header>
+
+  <main id="main" class="education-main">
+    <nav class="article-nav" aria-label="現在の位置"><a href="../../">ホーム</a><span aria-hidden="true"> / </span><span>教育・講義</span></nav>
+    <article aria-labelledby="article-title">
+      <header class="article-header">
+        <p class="eyebrow" lang="en">Teaching / Working with observations</p>
+        <h1 id="article-title"><span><span class="title-phrase">観測データから</span><span class="title-phrase">宇宙を読み解く</span></span><span>天文データ解析実習</span></h1>
+        <p class="article-subtitle">自分の手で解析し、根拠をもって説明する</p>
+        <p class="article-lead">観測データに含まれる問題を見つけ、処理の方法を選び、結果から天体の姿を考える。中山大学の学部生向け科目「<span lang="zh-CN">天文观测数据与处理</span>」（天文観測データ解析実習）では、複数のテーマで実習とレポート作成に取り組みます。私はそのうち電波天文学のパートを担当しています。ここでは、2026年の実習を通じて経験する、小さな研究の過程を紹介します。</p>
+      </header>
+
+      <div class="article-body">
+        <section aria-labelledby="real-observations">
+          <h2 id="real-observations">実際の観測データから出発する</h2>
+          <p>使うのは、米国の電波干渉計VLAによる実際の観測データです。対象のIRC+10216は、炭素に富むAGB星、つまり一生の終盤を迎え、周囲にガスや塵を放出している星です。HC₃Nと一硫化ケイ素SiSという分子のスペクトル線を手がかりに、星の周りの分子ガスの分布や運動を調べます。スペクトル線は、分子が特定の周波数で放つ電波で、その強さや周波数のずれが物質の状態を伝えます。</p>
+          <p>学生は、電波干渉計データの較正・画像化に使う専門ソフトウェアCASAで作業します。まず観測記録を読み、使われたアンテナ、対象天体と較正の基準になる天体、周波数や分解能を確認します。これから扱う数値が、いつ、どのような条件で測られたものかを知ることが、解析の出発点です。</p>
+        </section>
+
+        <section aria-labelledby="data-judgments">
+          <h2 id="data-judgments">使えるデータか、自分で見極める</h2>
+          <p>生データを図にすると、不自然な変化や強い信号が見つかります。しかし、目立つ点をすべて除けばよいわけではありません。信号の強さを時刻やアンテナ間の間隔に対して調べると、装置の問題なのか、広がった天体の構造を反映している可能性があるのか、判断の手がかりが得られます。どのデータを解析から外し、なぜそう判断したかを記録します。</p>
+          <p>続いて、アンテナ位置の誤差や大気の影響、受信系の周波数ごとの応答、信号の振幅・位相の変動を補正し、電波の強さの基準を定めます。これが較正です。処理後にもデータを点検し、問題が残れば除外する範囲を見直して再較正します。コマンドが正常に終わったことと、科学的に使える結果が得られたことを区別し、補正が働いたかを確かめます。</p>
+        </section>
+
+        <section aria-labelledby="image-quality">
+          <h2 id="image-quality">画像を作り、その信頼性を測る</h2>
+          <p>離れたアンテナで測った信号を組み合わせ、天体の画像へ進みます。干渉計で得られる情報は限られているため、最初の画像には観測の仕方に由来する副次的な模様も含まれます。CLEANという画像復元の方法を使い、処理前後で何が変わったかを比較します。復元する領域などの選び方によって人工的な構造が生じ得ることも、画像を見る際の注意点です。</p>
+          <p>「見やすくなった」という印象だけで評価は終わりません。雑音の大きさ、信号対雑音比、細部を見分ける角分解能、残った不自然な模様を調べます。天体自身の信号を使う自己較正を試す場合も、前後の画像を数値で比べます。うまく改善しなければ、原因と対応を考え、その経過を説明することが課題になります。</p>
+        </section>
+
+        <section aria-labelledby="physical-interpretation">
+          <h2 id="physical-interpretation">分布と運動から、物理を考える</h2>
+          <p>分子の電波を周波数ごとに画像化すると、空の二方向と周波数を軸に持つ「データキューブ」ができます。周波数のずれをドップラー効果による視線方向の速度に換算し、速度ごとの画像や、線の強さを足し合わせた積分強度マップを作ります。周波数の軸は奥行きの距離そのものではなく、空間構造を考えるには運動のモデルや仮定も必要です。</p>
+          <p>HC₃NとSiSの放射は、星からどのくらい離れた場所まで見えるのか。分布の違いは何を意味し、ガスはどのように動いているのか。抽出したスペクトルや速度のマップを読み、単純な数学的モデルで説明できるかを考えます。可視光の画像や先行研究との比較も手がかりです。測った数値と、それを説明するために置いた仮定を分けながら、自分の結果から物理的な説明を組み立てていきます。</p>
+        </section>
+
+        <section aria-labelledby="scientific-report">
+          <h2 id="scientific-report">小さな研究を、文章として完成させる</h2>
+          <p>解析の過程と考察は英語のレポートにまとめます。方法、結果、物理的な解釈、文献との比較、解析の限界を説明し、判断を図や数値で裏づけます。期待と違う結果や不完全な処理についても、何が起き、どこまで分かり、何がまだ分からないのかを筋道立てて示すことを重視します。</p>
+          <p>資料と基本的な手順を足場に、必要な情報を自分で調べ、試し、考察します。2026年の資料では、AIによる調査・コード作成・英文改善などの支援も認めていますが、参考文献や科学的な内容は自ら原典と照合するよう求めています。提出前の原稿について教員と議論し、説明を練り直す機会も設けています。</p>
+          <p>データの点検から結果の検証、そして他者に伝わる科学的な文章までを、自分の仕事としてつなぐ。そこで経験する試行錯誤と判断の積み重ねが、この実習で大切にしていることです。学部の段階で取り組む小さな研究が、その先で自ら科学的な問題に向き合うための足場になればと考えています。</p>
+        </section>
+      </div>
+      <nav class="article-return" aria-label="ホームへの案内"><a href="../../">← ホームに戻る</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="copyright"><span aria-hidden="true">©</span> Jun-ichi Nakashima</p></div></footer>
+</body>
+</html>
