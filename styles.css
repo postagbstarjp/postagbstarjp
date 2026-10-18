@@ -529,3 +529,39 @@ h1 span[lang="en"] {
     border-top: 1px solid #999;
   }
 }
+
+/* Teaching uses the site's article typography, without research-paper metadata. */
+.education-main { max-width: 880px; }
+.education-section {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) minmax(420px, 1fr);
+  gap: clamp(70px, 10vw, 150px);
+  padding: clamp(75px, 9vw, 110px) 0;
+  border-bottom: 1px solid var(--line);
+}
+.education-section h2 {
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.education-entry h3 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.education-entry p { margin-bottom: 0; }
+@media (max-width: 960px) {
+  .education-section { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media (max-width: 540px) {
+  .education-section { padding: 70px 0; }
+  .education-entry h3 { font-size: 1.15rem; }
+}
+
+/* Space two course entries within the existing teaching section. */
+.education-entries .education-entry + .education-entry {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
