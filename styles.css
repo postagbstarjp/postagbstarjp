@@ -224,7 +224,7 @@ h1 span[lang="en"] {
 
 .links-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(50px, 9vw, 110px);
   margin-bottom: clamp(90px, 12vw, 150px);
   padding-top: clamp(60px, 8vw, 90px);
@@ -236,33 +236,39 @@ h1 span[lang="en"] {
   font-size: clamp(1.3rem, 2vw, 1.6rem);
 }
 
-.link-group > p:not(.eyebrow):not(.text-link) {
+.link-group > p:not(.eyebrow) {
   max-width: 30rem;
   margin-bottom: 1.5rem;
   font-size: 0.92rem;
-}
-
-.text-link {
-  margin-bottom: 0;
 }
 
 .link-group a {
   text-decoration-color: #9aa6a9;
 }
 
-.profile-links ul {
+.external-links {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.profile-links li + li {
+.external-links li + li {
   margin-top: 0.7rem;
 }
 
-.profile-links a,
-.text-link a {
+.external-links a {
   font-size: 0.9rem;
+}
+
+.media-links li + li {
+  margin-top: 1.1rem;
+}
+
+.media-links p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.85;
 }
 
 .site-footer {
