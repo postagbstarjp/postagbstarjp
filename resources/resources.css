@@ -1,0 +1,137 @@
+/* Resources: scoped additions to the site's paper, type and rule system. */
+.resources-page {
+  --accent: #2e5355;
+  --muted: #596765;
+}
+.resources-page .home-link {
+  font-family: var(--sans);
+  font-size: .8rem;
+  padding: .25rem 0;
+}
+.resources-page .resource-intro { padding: 54px 0 0; }
+.resources-page .resource-intro > .eyebrow { margin-bottom: 20px; }
+.resources-page h1 {
+  font-size: clamp(1.6rem, 2.7vw, 2.5rem);
+  line-height: 1.65;
+  letter-spacing: .045em;
+}
+.resources-page .intro-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+  margin-top: 28px;
+}
+.resources-page .intro-copy p { margin-bottom: 0; }
+.resources-page .section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  margin-top: 30px;
+  padding: 12px 0;
+  border-block: 1px solid var(--accent);
+  font-family: var(--sans);
+  font-size: .85rem;
+}
+.resources-page .section-nav a {
+  padding: 8px 0;
+}
+.resources-page .section-nav span { margin-right: 8px; color: var(--muted); font-size: .7rem; }
+.resources-page .facility-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .8rem;
+}
+.resources-page .facility-nav a { padding-block: 4px; }
+.resources-page .resource-section { padding: 46px 0 24px; scroll-margin-top: 20px; }
+.resources-page .resource-section + .resource-section { border-top: 1px solid var(--accent); }
+.resources-page .section-heading { margin-bottom: 26px; }
+.resources-page .section-heading .eyebrow { margin-bottom: 8px; }
+.resources-page h2 { font-size: clamp(1.4rem, 2.2vw, 1.85rem); font-weight: 500; line-height: 1.65; margin-bottom: 12px; }
+.resources-page .section-heading > p:last-child { max-width: 48rem; margin-bottom: 0; }
+.resources-page .group-title {
+  font-family: var(--sans);
+  font-size: .95rem;
+  font-weight: 600;
+  margin: 26px 0 0;
+  padding: 10px 0;
+  color: var(--accent);
+  border-bottom: 1px solid var(--line);
+}
+.resources-page .resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 36px;
+}
+.resources-page ul { list-style: none; padding: 0; margin: 0; }
+.resources-page .resource-item {
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+  scroll-margin-top: 20px;
+}
+.resources-page .resource-item :is(h3, h4) {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.resources-page .resource-item :is(h3, h4) a { display: block; padding: 3px 0; text-decoration: none; }
+.resources-page .resource-item :is(h3, h4) a:is(:hover, :focus-visible) { text-decoration-line: underline; }
+.resources-page .outward { font-family: var(--sans); font-size: .75em; color: var(--accent); white-space: nowrap; }
+.resources-page .resource-item p { margin: 0; font-size: .94rem; line-height: 1.95; }
+.resources-page .resource-item .item-label {
+  font-family: var(--sans);
+  font-size: .72rem;
+  line-height: 1.65;
+  letter-spacing: .035em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+.resources-page .primary-sources h4 { font-family: Georgia, var(--serif); font-size: 1.55rem; }
+.resources-page .resource-item .service-note {
+  font-size: .82rem;
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+  margin-top: 14px;
+}
+.resources-page .reading-note { font-size: .88rem; color: var(--muted); margin: 20px 0 0; max-width: 50rem; }
+.resources-page .journal-short { font-family: Georgia, var(--serif); font-size: 1.35rem; color: var(--accent); }
+.resources-page .journal-name { display: block; font-family: var(--sans); font-size: .76rem; font-weight: 400; margin-top: 3px; }
+.resources-page .journal-grid h4 a { position: relative; padding-right: 20px; }
+.resources-page .journal-grid .outward { position: absolute; top: 6px; right: 0; }
+.resources-page .group-intro { font-size: .9rem; margin: 12px 0 0; }
+.resources-page .resource-item .utility-links { font-family: var(--sans); font-size: .8rem; margin-top: 14px; }
+.resources-page .utility-links a { display: inline-block; padding-block: 4px; }
+.resources-page .affiliation-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.resources-page .affiliation-columns .group-title { margin-top: 0; }
+.resources-page #sysu { border-left: 2px solid var(--accent); padding-left: 16px; }
+.resources-page #sysu .item-label { color: var(--accent); font-weight: 600; }
+.resources-page .resource-colophon { margin: 28px 0 40px; padding-top: 20px; font-family: var(--sans); font-size: .75rem; color: var(--muted); }
+.resources-page .resource-colophon p { margin-bottom: 8px; }
+.resources-page .footer-inner { gap: 16px; flex-wrap: wrap; font-size: .85rem; }
+@media (max-width: 960px) {
+  .resources-page .site-header, .resources-page main, .resources-page .footer-inner { width: calc(100% - 56px); }
+  .resources-page .resource-grid, .resources-page .affiliation-columns, .resources-page .intro-copy { column-gap: 28px; }
+  .resources-page .section-nav { column-gap: 20px; }
+}
+@media (max-width: 640px) {
+  .resources-page .site-header, .resources-page main, .resources-page .footer-inner { width: calc(100% - 40px); }
+  .resources-page .resource-intro { padding-top: 32px; }
+  .resources-page .desktop-break { display: none; }
+  .resources-page .intro-copy, .resources-page .resource-grid, .resources-page .affiliation-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .resources-page .intro-copy p + p { margin-top: 16px; }
+  .resources-page .resource-intro > .eyebrow { font-size: .6rem; letter-spacing: .08em; }
+  .resources-page .section-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 14px; font-size: .78rem; }
+  .resources-page .resource-section { padding-top: 32px; }
+  .resources-page .section-heading { margin-bottom: 16px; }
+  .resources-page .resource-item { padding-block: 18px; }
+  .resources-page .affiliation-columns > div + div { margin-top: 26px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
