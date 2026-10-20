@@ -1,0 +1,26 @@
+/* Paper Watch extends the shared article typography without changing research pages. */
+.home-page .home-nav { flex-wrap: wrap; }
+.watch-page .paper-name, .watch-page .paper-authors { overflow-wrap: anywhere; }
+.watch-page .article-return { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+.watch-page .research-figure { max-width: 760px; margin-inline: auto; }
+.watch-page .figure-compact { max-width: 540px; }
+.watch-page .figure-source a { margin-left: 0; }
+.figure-zoom { margin-top: 1em; color: var(--accent); }
+.figure-zoom summary { cursor: pointer; text-decoration: underline; text-underline-offset: .25em; }
+.figure-zoom-panel { max-height: 70vh; margin-top: 1rem; overflow: auto; background: white; }
+.watch-page .figure-zoom-panel img { width: auto; max-width: none; height: auto; }
+.watch-list { margin: 0; padding: 0; list-style: none; }
+.watch-list > li { padding: 2.4rem 0; border-bottom: 1px solid var(--line); }
+.watch-list h2 { margin: .6rem 0 1rem; font-size: clamp(1.2rem, 2vw, 1.55rem); font-weight: 500; line-height: 1.85; }
+.watch-list p { max-width: 43rem; margin-bottom: .7rem; }
+.watch-list .watch-meta { color: var(--muted); font-family: var(--sans); font-size: .78rem; overflow-wrap: anywhere; }
+.home-page .paper-watch-section { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 36px; padding: 32px 0 40px; border-top: 3px double var(--accent); }
+.home-page .paper-watch-section .eyebrow { margin-bottom: 12px; }
+.home-page .paper-watch-section h2 { font-size: 1.65rem; font-weight: 500; }
+.home-page .paper-watch-section p { max-width: 43rem; }
+.home-page .paper-watch-section .watch-topics { color: var(--muted); font-family: var(--sans); font-size: .8rem; }
+@media (max-width: 600px) {
+  .home-page .paper-watch-section { grid-template-columns: 1fr; gap: 8px; padding: 26px 0 32px; }
+  .home-page .paper-watch-section h2 { font-size: 1.4rem; }
+  .watch-list > li { padding: 1.8rem 0; }
+}
