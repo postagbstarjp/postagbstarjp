@@ -33,17 +33,62 @@ body {
 
 a {
   color: inherit;
+  text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.28em;
 }
 
 a:hover {
   color: var(--accent);
+  text-decoration-color: currentColor;
 }
 
 a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
+}
+
+/* Link roles: prose stays underlined; navigation and linked headings reveal
+   an underline on hover/focus. Focus outlines remain visible in every role. */
+:is(.home-nav, .article-nav, .profile-contents, .section-nav, .facility-nav,
+    .article-return, .profile-return) a,
+.home-link,
+.back-to-top {
+  text-decoration-line: none;
+}
+:is(.home-nav, .article-nav, .profile-contents, .section-nav, .facility-nav,
+    .article-return, .profile-return) a:is(:hover, :focus-visible),
+.home-link:is(:hover, :focus-visible),
+.back-to-top:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+}
+:is(.research-entry, .education-entry, .watch-list, .profile-papers,
+    .profile-conversations, .paper-watch-section, .resources-entry) :is(h2, h3) a {
+  color: var(--accent);
+  text-decoration-line: none;
+}
+:is(.research-entry, .education-entry, .watch-list, .profile-papers,
+    .profile-conversations, .paper-watch-section, .resources-entry) :is(h2, h3) a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+}
+.section-link {
+  display: inline-block;
+  padding-block: 4px;
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .85rem;
+  letter-spacing: .035em;
+  text-decoration-line: underline;
+  line-height: 1.9;
+}
+.site-footer a {
+  color: inherit;
+  text-decoration-line: none;
+}
+.site-footer a:is(:hover, :focus-visible) {
+  color: inherit;
+  text-decoration-line: underline;
+  outline-color: currentColor;
 }
 
 .skip-link {
@@ -632,10 +677,8 @@ h1 span[lang="en"] {
 }
 .home-page .home-nav a {
   padding: 3px 0;
-  text-decoration: none;
   text-underline-offset: 0.5em;
 }
-.home-page .home-nav a:hover { text-decoration: underline; }
 .home-page .intro {
   grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.45fr);
   align-items: center;
@@ -708,13 +751,6 @@ h1 span[lang="en"] {
   border-left: 1px solid var(--line);
 }
 .home-page .intro-body p:last-child { grid-column: 1 / -1; margin: 0; text-align: right; }
-.home-page .intro-body p:last-child a {
-  color: var(--accent);
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
-}
 .home-page [id] { scroll-margin-top: 32px; }
 .home-page .research-section,
 .home-page .education-section {
@@ -802,14 +838,6 @@ h1 span[lang="en"] {
   font-size: 1.58rem;
   line-height: 1.75;
 }
-.home-page .research-entry h3 a,
-.home-page .education-entry h3 a {
-  text-decoration-color: #a5b1aa;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.24em;
-}
-.home-page .research-entry h3 a:hover,
-.home-page .education-entry h3 a:hover { text-decoration-color: var(--accent); }
 .home-page .research-entry > p:not(.entry-date, .entry-status),
 .home-page .education-entry > p {
   margin-bottom: 14px;
@@ -876,6 +904,11 @@ h1 span[lang="en"] {
 }
 .home-page .about-site .eyebrow { font-size: 0.65rem; }
 .home-page .about-site h2 { font-size: 1.22rem; }
+.home-page .resources-entry {
+  grid-template-columns: minmax(250px, .85fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 36px;
+}
 .home-page .about-body { max-width: 42rem; font-size: 0.94rem; line-height: 2; }
 .home-page .about-body p:last-child { margin-bottom: 0; }
 .home-page .footer-inner {
@@ -890,9 +923,7 @@ h1 span[lang="en"] {
   color: #d3d9d5;
   font-family: var(--sans);
   font-size: 0.72rem;
-  text-decoration: none;
 }
-.home-page .back-to-top:hover { text-decoration: underline; }
 .home-page .back-to-top:focus-visible { outline-color: #d3d9d5; }
 
 @media (max-width: 1100px) {
@@ -900,6 +931,7 @@ h1 span[lang="en"] {
   .home-page .intro { gap: 28px 44px; }
   .home-page .intro-body { column-gap: 24px; }
   .home-page .about-site { grid-template-columns: 164px minmax(0, 1fr); gap: 32px; }
+  .home-page .resources-entry { grid-template-columns: 250px minmax(0, 1fr); }
   .home-page .research-entries, .home-page .education-entries { column-gap: 26px; }
   .home-page .links-section { gap: 40px; }
   .home-page .link-group + .link-group { padding-left: 30px; }
@@ -942,7 +974,6 @@ h1 span[lang="en"] {
   .home-page .intro-body p:nth-child(2), .home-page .intro-body p:nth-child(3) { padding-left: 0; border-left: 0; }
   .home-page .intro-body p:nth-child(3) { text-wrap: pretty; }
   .home-page .intro-body p:last-child { text-align: left; }
-  .home-page .intro-body p:last-child a { font-size: 0.78rem; }
   .home-page .research-section, .home-page .education-section { gap: 22px; padding: 24px 0 34px; }
   .home-page .research-section > div:first-child, .home-page .education-section > div:first-child { gap: 12px; }
   .home-page .education-section > div:first-child { padding: 10px 14px; }

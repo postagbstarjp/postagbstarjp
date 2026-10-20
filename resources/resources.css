@@ -34,10 +34,19 @@
 }
 .resources-page .section-nav a {
   padding: 8px 0;
-  text-decoration: none;
 }
 .resources-page .section-nav span { margin-right: 8px; color: var(--muted); font-size: .7rem; }
-.resources-page .section-nav a:hover { text-decoration: underline; }
+.resources-page .facility-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-family: var(--sans);
+  font-size: .8rem;
+}
+.resources-page .facility-nav a { padding-block: 4px; }
 .resources-page .resource-section { padding: 46px 0 24px; scroll-margin-top: 20px; }
 .resources-page .resource-section + .resource-section { border-top: 1px solid var(--accent); }
 .resources-page .section-heading { margin-bottom: 26px; }
@@ -73,7 +82,7 @@
   overflow-wrap: anywhere;
 }
 .resources-page .resource-item :is(h3, h4) a { display: block; padding: 3px 0; text-decoration: none; }
-.resources-page .resource-item :is(h3, h4) a:hover { text-decoration: underline; }
+.resources-page .resource-item :is(h3, h4) a:is(:hover, :focus-visible) { text-decoration-line: underline; }
 .resources-page .outward { font-family: var(--sans); font-size: .75em; color: var(--accent); white-space: nowrap; }
 .resources-page .resource-item p { margin: 0; font-size: .94rem; line-height: 1.95; }
 .resources-page .resource-item .item-label {

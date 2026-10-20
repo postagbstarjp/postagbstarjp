@@ -29,8 +29,6 @@
 .watch-kicker { margin: 0 0 8px; color: var(--accent); font-family: var(--sans); font-size: .75rem; line-height: 1.8; }
 .watch-kicker span { margin-left: .4em; color: var(--muted); }
 .watch-list h2 { margin: 0 0 14px; font-size: clamp(1.2rem, 1.8vw, 1.4rem); font-weight: 500; line-height: 1.7; text-wrap: pretty; }
-.watch-list h2 a { text-decoration: none; }
-.watch-list h2 a:hover { text-decoration: underline; }
 .watch-feature h2 { margin-bottom: 16px; font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
 .watch-summary { margin: 0; line-height: 1.95; }
 .watch-story { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
