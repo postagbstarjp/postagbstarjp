@@ -1,0 +1,85 @@
+/* Research Watch extends the shared article typography without changing research pages. */
+.home-page .home-nav { flex-wrap: wrap; }
+.watch-page .paper-name, .watch-page .paper-authors { overflow-wrap: anywhere; }
+.watch-page .article-return { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+.watch-page .research-figure { max-width: 760px; margin-inline: auto; }
+.watch-page .figure-compact { max-width: 540px; }
+.watch-page .figure-source a { margin-left: 0; }
+.figure-zoom { margin-top: 1em; color: var(--accent); }
+.figure-zoom summary { cursor: pointer; text-decoration: underline; text-underline-offset: .25em; }
+.figure-zoom-panel { max-height: 70vh; margin-top: 1rem; overflow: auto; background: white; }
+.watch-page .figure-zoom-panel img { width: auto; max-width: none; height: auto; }
+
+/* The index has its own compact masthead and an editorial article grid. */
+.watch-index .research-main { max-width: 1120px; }
+.watch-masthead { display: grid; grid-template-columns: .95fr 1.35fr; gap: 36px; align-items: end; padding: 30px 0 24px; border-bottom: 3px double var(--accent); }
+.watch-masthead .eyebrow { margin-bottom: 12px; }
+.watch-masthead h1 { font-size: clamp(1.7rem, 2.7vw, 2.25rem); font-weight: 500; line-height: 1.6; letter-spacing: .025em; }
+.watch-deck { margin: 8px 0 0; color: var(--muted); font-size: .82rem; }
+.watch-introduction > p { margin: 0; line-height: 1.95; }
+.watch-introduction .watch-scope { margin-top: 10px; color: var(--muted); font-family: var(--sans); font-size: .76rem; }
+.watch-edition { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-family: var(--sans); font-size: .72rem; }
+.watch-edition p { margin: 0; }
+.watch-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; margin: 0; padding: 0; list-style: none; }
+.watch-list > li { min-width: 0; padding: 24px 0; border-top: 1px solid var(--line); }
+.watch-list > .watch-featured { grid-column: 1 / -1; border-top: 0; }
+.watch-list > li:nth-child(2) { padding-right: 28px; border-right: 1px solid var(--line); }
+.watch-list > li:nth-child(3) { padding-left: 28px; }
+.watch-feature { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: start; }
+.watch-kicker { margin: 0 0 8px; color: var(--accent); font-family: var(--sans); font-size: .75rem; line-height: 1.8; }
+.watch-kicker span { margin-left: .4em; color: var(--muted); }
+.watch-list h2 { margin: 0 0 14px; font-size: clamp(1.2rem, 1.8vw, 1.4rem); font-weight: 500; line-height: 1.7; text-wrap: pretty; }
+.watch-list h2 a { text-decoration: none; }
+.watch-list h2 a:hover { text-decoration: underline; }
+.watch-feature h2 { margin-bottom: 16px; font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
+.watch-summary { margin: 0; line-height: 1.95; }
+.watch-story { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.watch-thumbnail { min-width: 0; margin: 0; }
+.watch-feature .watch-thumbnail { width: 100%; max-width: 400px; margin-left: auto; }
+.watch-thumbnail > a { display: block; background: white; }
+.watch-thumbnail img { display: block; width: 100%; height: auto; }
+.watch-thumbnail figcaption { margin-top: 8px; color: var(--muted); font-family: var(--sans); font-size: .7rem; line-height: 1.8; }
+.watch-thumbnail figcaption span { display: block; }
+.watch-byline { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--sans); font-size: .76rem; line-height: 1.85; overflow-wrap: anywhere; }
+.watch-byline p { margin: 0 0 4px; }
+.watch-index .article-return { padding: 20px 0 32px; }
+.home-page .paper-watch-section { display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 2fr); gap: 36px; align-items: start; padding: 28px 0 32px; border-top: 3px double var(--accent); }
+.home-page .paper-watch-section .eyebrow { margin-bottom: 10px; }
+.home-page .paper-watch-section h2 { margin-bottom: 0; font-size: 1.5rem; font-weight: 500; }
+.home-page .paper-watch-section p { max-width: 43rem; margin-bottom: 12px; }
+.home-page .paper-watch-section p:last-child { margin-bottom: 0; }
+.home-page .paper-watch-section .watch-topics { display: flex; flex-wrap: wrap; gap: 4px 22px; margin: 0 0 12px; padding: 12px 0 0; border-top: 1px solid var(--line); list-style: none; color: var(--accent); font-family: var(--sans); font-size: .8rem; }
+@media (max-width: 960px) {
+  .watch-masthead { grid-template-columns: 1fr; gap: 16px; padding-top: 24px; }
+  .watch-masthead h1 { font-size: 1.9rem; }
+  .watch-feature { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+  .watch-story { grid-template-columns: 1fr; gap: 14px; }
+  .watch-story-copy { display: contents; }
+  .watch-story .watch-byline { order: 1; margin-top: 0; }
+  .watch-story .watch-thumbnail { max-width: 260px; }
+}
+@media (max-width: 820px) {
+  .home-page .paper-watch-section { grid-template-columns: 1fr; gap: 14px; }
+}
+@media (max-width: 600px) {
+  .home-page .home-nav { display: grid; grid-template-columns: repeat(3, auto); column-gap: 14px; row-gap: 0; }
+  .watch-list { grid-template-columns: 1fr; }
+  .watch-list > li, .watch-list > li:nth-child(2), .watch-list > li:nth-child(3) { padding: 22px 0; border-right: 0; }
+  .watch-feature { display: flex; flex-direction: column; gap: 0; }
+  .watch-feature-copy { display: contents; }
+  .watch-feature .watch-byline { order: 1; }
+  .watch-feature .watch-thumbnail { margin: 18px 0 0; max-width: none; }
+  .watch-masthead { padding: 20px 0; }
+  .watch-masthead h1 { font-size: 1.6rem; }
+  .watch-masthead .eyebrow { margin-bottom: 8px; }
+  .watch-edition { font-size: .7rem; }
+  .watch-list h2, .watch-feature h2 { font-size: 1.3rem; }
+  .watch-story .watch-thumbnail { max-width: none; }
+  .watch-list > li:nth-child(2) .watch-thumbnail { max-width: 270px; margin-inline: auto; }
+  .home-page .paper-watch-section { grid-template-columns: 1fr; gap: 14px; padding: 24px 0 28px; }
+  .home-page .paper-watch-section h2 { font-size: 1.4rem; }
+}
+@media print {
+  .watch-masthead, .watch-list, .watch-feature, .watch-story { display: block; }
+  .watch-list > li { break-inside: avoid; }
+}
