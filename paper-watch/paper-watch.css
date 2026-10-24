@@ -81,3 +81,17 @@
   .watch-masthead, .watch-list, .watch-feature, .watch-story { display: block; }
   .watch-list > li { break-inside: avoid; }
 }
+
+/* New research-watch abstracts, designed as a text-led editorial section. */
+.watch-latest { margin-top: 26px; }
+.watch-latest-heading { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; align-items: baseline; padding-bottom: 12px; border-bottom: 3px double var(--accent); }
+.watch-latest-heading h2 { margin: 0; font-size: 1.15rem; font-weight: 500; }
+.watch-latest-heading p { margin: 0; color: var(--muted); font: .76rem var(--sans); }
+.watch-new-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 30px; margin: 0 0 30px; padding: 0; list-style: none; }
+.watch-new-list > li { min-width: 0; padding: 23px 0 26px; border-bottom: 1px solid var(--line); }
+.watch-new-list h3 { margin: 0 0 12px; font-size: clamp(1.14rem,1.65vw,1.35rem); font-weight: 500; line-height: 1.75; }
+.watch-new-list h3 a { color: var(--accent); text-decoration: none; }
+.watch-new-list h3 a:hover, .watch-new-list h3 a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
+.watch-new-list .watch-summary { font-size: .94rem; }
+.watch-new-meta { margin: 14px 0 0; font-family: var(--sans); font-size: .72rem; line-height: 1.85; color: var(--muted); overflow-wrap: anywhere; }
+@media(max-width:600px) { .watch-new-list { grid-template-columns: 1fr; } .watch-new-list > li { padding: 20px 0; } }
