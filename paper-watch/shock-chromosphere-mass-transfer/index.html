@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="巨大星の表面は伴星との距離に比べてまだ十分小さくても、その外側に広がったガスは伴星へ流れ込めるのでしょうか。衝撃波に支えられる厚い大気を考慮すると、従来の連星進化モデルが見落としていた質量移動が起こり得ます。">
+  <title>星の大気が広がると、連星間の質量移動はどう変わるか｜中島の研究ウォッチ｜中島淳一</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../paper-watch.css">
+</head>
+<body class="research-page watch-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="site-name" href="../../" aria-label="中島淳一 ホーム"><span lang="ja">中島淳一</span><span lang="en">Jun-ichi Nakashima</span></a>
+    <p class="site-description" lang="en">Astronomy, notes &amp; essays</p>
+  </div></header>
+  <main id="main" class="research-main" tabindex="-1">
+    <nav class="article-nav" aria-label="現在の位置"><a href="../../">ホーム</a><span aria-hidden="true"> / </span><a href="../">中島の研究ウォッチ</a><span aria-hidden="true"> / </span><span aria-current="page">恒星進化・連星</span></nav>
+    <article aria-labelledby="article-title">
+      <header class="article-header">
+        <p class="eyebrow" lang="en">Research Watch</p>
+        <p class="article-date">記事公開：<time datetime="2026-10-24">2026年10月24日</time> · 他の研究者の論文紹介</p>
+        <h1 id="article-title">星の大気が広がると、連星間の質量移動はどう変わるか</h1>
+        <p class="article-subtitle">衝撃波が支える巨大星の外層大気と、ロッシュローブを満たす前の相互作用</p>
+        <p class="article-lead">巨大星の表面は伴星との距離に比べてまだ十分小さくても、その外側に広がったガスは伴星へ流れ込めるのでしょうか。衝撃波に支えられる厚い大気を考慮すると、従来の連星進化モデルが見落としていた質量移動が起こり得ます。</p>
+        <p class="paper-status">プレプリント・PASP査読後の改訂段階（著者コメント）<br><a href="https://arxiv.org/abs/2610.29323">原著を読む（arXiv）</a></p>
+      </header>
+      <div class="article-body">
+        <section aria-labelledby="section-1">
+          <h2 id="section-1">星の表面が接触する前に、何が起こるのか</h2>
+          <p>近接連星では、片方の星が重力的な境界であるロッシュローブを満たすと、内側のラグランジュ点付近を通って伴星側へガスが移ります。ところが恒星の「見える表面」である光球は、ガスが存在する領域の外縁ではありません。光球の上にも希薄な大気があり、その一部はロッシュローブを満たす前から相手の星へ達し得ます。</p>
+          <p>従来の光学的に薄い質量移動の処方では、外層大気が主として熱的なガス圧で支えられるとし、光球が境界から遠い段階の質量移動は非常に小さいと見積もります。この論文は、その仮定が脈動し衝撃波を生む巨大星に適切かを問い直します。</p>
+        </section>
+        <section aria-labelledby="section-2">
+          <h2 id="section-2">衝撃波が厚い彩層を作る</h2>
+          <p>近年の巨大星の流体計算では、外向きに伝わる衝撃波のため、いわゆる彩層が恒星半径の数倍まで広がる可能性が指摘されています。著者らは、このような衝撃波に支えられた外層ガスを連星重力場の中で解析的に表し、内側のラグランジュ点を通る質量流量を求めました。その処方を恒星進化計算コードMESAにも実装しています。</p>
+          <p>予測された光学的に薄い段階の質量移動率は、従来の熱的に支持された大気モデルより何桁も大きくなる場合があります。差が目立つのは、とくに赤色巨星分枝や漸近巨星分枝の高い位置にある、外層の広がった星です。ただし、これは新たな観測で直接測定された流量ではなく、物理モデルによる予測です。</p>
+        </section>
+        <section aria-labelledby="section-3">
+          <h2 id="section-3">WRLOFとどう違うのか</h2>
+          <p>恒星風が伴星の重力で集められるwind Roche-lobe overflow（WRLOF）と似た現象ですが、著者らが強調するのは、経験的な質量移動効率を与えるのではなく、衝撃波で支持された大気の構造から流量を導く点です。また、安定した質量移動で終わる連星にも、共通外層に入る連星にも、光球接触以前の質量交換が影響し得ます。</p>
+          <p>最終的な連星の周期や両星の質量が変わる可能性があり、著者らはMESAにおける従来のRitter（1988）の光学的に薄い質量移動処方の実装上の不正確さも指摘し修正しています。モデルの結果は衝撃波の大気支持をどう仮定するかに依存するため、実際の巨大星の速度場・密度構造による検証が重要です。</p>
+        </section>
+        <section aria-labelledby="section-4">
+          <h2 id="section-4">進化星研究への接点</h2>
+          <p>AGB星では、脈動、衝撃波、ダスト形成、恒星風が星の外層で連動します。単独星の質量放出として理解してきた現象が、伴星のある環境では質量交換の開始条件を左右するかもしれません。メーザーや分子線で測る内側のガス速度構造と、連星進化モデルを結びつける際に注目したい考え方です。</p>
+        </section>
+      </div>
+      <section class="paper-information" aria-labelledby="paper-title">
+        <p class="eyebrow" lang="en">Original paper</p>
+        <h2 id="paper-title">原著・出典情報</h2>
+        <p class="paper-name" lang="en">Enhanced Mass Transfer from Extended Shock-Supported Stellar Chromospheres</p>
+        <p class="paper-authors" lang="en">Soumyadeep Bhattacharjee, Jim Fuller, Kareem El-Badry</p>
+        <p>arXiv:2610.29323（2026年10月）<br>プレプリント・PASP査読後の改訂段階（著者コメント）</p>
+        <p><a href="https://arxiv.org/abs/2610.29323">原著の概要・書誌情報</a> · <a href="https://arxiv.org/pdf/2610.29323">原著PDF（外部サイト）</a></p>
+        <p class="paper-note">2026年10月24日時点の公開アブストラクトと書誌情報に基づく一般向け解説です。原著全文・図を逐一精査した学術的レビューではありません。原著の図は転載せず、観測結果・理論的予測・今後の可能性を区別して記述しています。</p>
+      </section>
+      <nav class="article-return" aria-label="関連ページへの案内"><a href="../">← 中島の研究ウォッチ一覧</a><a href="../../">ホームへ戻る</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="copyright"><span aria-hidden="true">©</span> Jun-ichi Nakashima</p></div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "af9dc6af89aa4a5196e4b3d14166c4e8"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
