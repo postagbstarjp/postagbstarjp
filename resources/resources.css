@@ -64,6 +64,9 @@
   font-size: .8rem;
 }
 .resources-page .facility-nav a { padding-block: 4px; }
+.resources-page .china-index { margin-top: 24px; }
+.resources-page .china-index h2 { font-family: var(--sans); font-size: .85rem; margin-bottom: 0; }
+.resources-page .china-index .facility-nav { font-size: .76rem; gap: 2px 18px; }
 .resources-page .resource-section { padding: 46px 0 24px; scroll-margin-top: 20px; }
 .resources-page .resource-section + .resource-section { border-top: 1px solid var(--accent); }
 .resources-page .section-heading { margin-bottom: 26px; }
@@ -93,14 +96,14 @@
 .resources-page .software-intro { max-width: 48rem; }
 .resources-page .software-intro p { margin-bottom: 1em; }
 .resources-page .resource-grid {
-  column-count: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   column-gap: 36px;
 }
 .resources-page ul { list-style: none; padding: 0; margin: 0; }
 .resources-page .resource-item {
   min-width: 0;
-  -webkit-column-break-inside: avoid;
-  break-inside: avoid-column;
   border-bottom: 1px solid var(--line);
   padding: 20px 0;
   scroll-margin-top: 20px;
@@ -136,7 +139,7 @@
 .resources-page .reading-note { font-size: .88rem; color: var(--muted); margin: 20px 0 0; max-width: 50rem; }
 .resources-page .journal-short { font-family: Georgia, var(--serif); font-size: 1.35rem; color: var(--accent); }
 .resources-page .journal-name { display: block; font-family: var(--sans); font-size: .76rem; font-weight: 400; margin-top: 3px; }
-.resources-page .journal-grid h4 a { position: relative; padding-right: 20px; }
+.resources-page .journal-grid :is(h3, h4) a { position: relative; padding-right: 20px; }
 .resources-page .journal-grid .outward { position: absolute; top: 6px; right: 0; }
 .resources-page .group-intro { font-size: .9rem; margin: 12px 0 0; }
 .resources-page .resource-item .utility-links { font-family: var(--sans); font-size: .8rem; margin-top: 14px; }
@@ -150,6 +153,11 @@
   font-size: .86rem;
 }
 .resources-page .relocation-links li { scroll-margin-top: 20px; }
+.resources-page .related-guides { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.resources-page .related-guides h2 { font-family: var(--sans); font-size: .9rem; }
+.resources-page .related-guides > p { font-size: .85rem; color: var(--muted); }
+.resources-page .related-guides .relocation-links { font-size: .78rem; gap: 8px 22px; }
+.resources-page .anchor-alias { display: block; scroll-margin-top: 20px; }
 .resources-page :is(.collection-nav, .section-nav, .relocation-links, .facility-nav) a {
   overflow-wrap: anywhere;
 }
@@ -170,7 +178,7 @@
   .resources-page .resource-intro { padding-top: 32px; }
   .resources-page .desktop-break { display: none; }
   .resources-page .intro-copy, .resources-page .affiliation-columns { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .resources-page .resource-grid { column-count: 1; }
+  .resources-page .resource-grid { grid-template-columns: minmax(0, 1fr); }
   .resources-page .collection-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
   .resources-page .intro-copy p + p { margin-top: 16px; }
   .resources-page .resource-intro > .eyebrow { font-size: .6rem; letter-spacing: .08em; }

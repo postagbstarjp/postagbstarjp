@@ -3,122 +3,209 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="対話型LLM、AIによる調査・読解・プログラミング、OverleafとGitHub。研究・執筆を支える12サービスと利用時の注意を紹介します。">
-  <title>AI・研究を支えるサービス｜研究・学習リンク集｜中島淳一</title>
+  <meta name="description" content="観測データの解析、画像の可視化、物理モデルの計算から、論文の読解・執筆、コードの共有まで。研究を進めるうえで役立つ30のソフトウェア・サービスを用途別に紹介します。AIの説明は一次資料ではありません。数値、引用、式の導出、研究上の判断は自分で確かめることが不可欠です。各ツールの仮定や、サービスの利用条件も確認してください。">
+  <title>研究・解析・執筆ツール｜研究・学習リンク集｜中島淳一</title>
   <link rel="stylesheet" href="../../styles.css?v=editorial-refined-20261018">
-  <link rel="stylesheet" href="../resources.css?v=resources-expanded-20261024">
+  <link rel="stylesheet" href="../resources.css?v=resources-unified-20261024">
 </head>
 <body class="resources-page">
-  <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header"><div class="header-inner">
-    <a class="site-name" href="../../" aria-label="中島淳一 ホーム"><span lang="ja">中島淳一</span><span lang="en">Jun-ichi Nakashima</span></a>
-    <a class="home-link" href="../../">ホームへ戻る</a>
-  </div></header>
-  <main id="main" tabindex="-1">
-    <header class="resource-intro">
-      <p class="eyebrow" lang="en">AI, Writing &amp; Development Tools</p>
-      <h1>AI・研究を支えるサービス</h1>
-      <div class="intro-copy"><p>大規模言語モデルを中心とする生成AIは、研究者の文章作成やプログラミングだけでなく、論文を読み、疑問を整理する過程にも入り込んでいます。</p><p>このページでは12サービスを紹介します。ただし、AIの説明は一次資料ではありません。数値、引用、式の導出、研究上の判断は自分で確かめることが不可欠です。料金や利用できる機能は各公式サイトで確認してください。</p></div>
-      <nav class="collection-nav" aria-label="研究・学習リンク集の各ページ">
-        <a href="../">総合案内<span>59項目</span></a>
-        <a href="../observatories/">観測施設・データ<span>52項目</span></a>
-        <a href="../learning/">専門教材・レビュー<span>29項目</span></a>
-        <a href="../ai-tools/" aria-current="page">AI・執筆支援<span>12項目</span></a>
-      </nav>
-      <nav class="section-nav" aria-label="このページの目次">
-        <a href="#conversation"><span aria-hidden="true">01</span>対話型AI</a>
-        <a href="#research-ai"><span aria-hidden="true">02</span>調査・読解</a>
-        <a href="#coding"><span aria-hidden="true">03</span>プログラミング</a>
-        <a href="#writing"><span aria-hidden="true">04</span>執筆・開発</a>
-      </nav>
-    </header>
-    <section id="conversation" class="resource-section" aria-labelledby="conversation-title">
-      <header class="section-heading"><p class="eyebrow">01 <span lang="en">/ 6 entries</span></p><h2 id="conversation-title">対話型AI</h2><p>問いを整理し、文章やコードのたたき台を作るための対話型サービスです。応答の正しさは、公式資料や原論文と照らし合わせて判断する必要があります。</p></header>
-      <h3 class="group-title">対話型AI</h3>
-      <ul class="resource-grid">
-        <li class="resource-item" id="chatgpt">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="site-header"><div class="header-inner"><a class="site-name" href="../../" aria-label="中島淳一 ホーム"><span lang="ja">中島淳一</span><span lang="en">Jun-ichi Nakashima</span></a><a class="home-link" href="../../">ホームへ戻る</a></div></header>
+<main id="main" tabindex="-1">
+<header class="resource-intro">
+<p class="eyebrow" lang="en">Research, Analysis & Writing Tools</p><h1>研究・解析・執筆ツール</h1>
+<div class="intro-copy"><p>観測データの解析、画像の可視化、物理モデルの計算から、論文の読解・執筆、コードの共有まで。研究を進めるうえで役立つ30のソフトウェア・サービスを用途別に紹介します。</p><p>AIの説明は一次資料ではありません。数値、引用、式の導出、研究上の判断は自分で確かめることが不可欠です。各ツールの仮定や、サービスの利用条件も確認してください。</p></div>
+<nav class="collection-nav" aria-label="研究・学習リンク集の各分野"><a href="../">研究情報源・公開データ<span>40項目</span></a>
+<a href="../observatories/">観測施設・観測計画<span>42項目</span></a>
+<a href="../learning/">学術誌・総説・専門教材<span>40項目</span></a>
+<a href="./" aria-current="page">研究・解析・執筆ツール<span>30項目</span></a></nav>
+<nav class="section-nav" aria-label="このページの目次"><a href="#software"><span aria-hidden="true">01</span>電波観測データの解析</a>
+<a href="#visualization"><span aria-hidden="true">02</span>天体画像・カタログの可視化</a>
+<a href="#modeling"><span aria-hidden="true">03</span>放射輸送・物理モデル</a>
+<a href="#python"><span aria-hidden="true">04</span>Pythonによる天文・科学解析</a>
+<a href="#conversation"><span aria-hidden="true">05</span>対話型AI・大規模言語モデル</a>
+<a href="#research-ai"><span aria-hidden="true">06</span>AIによる情報調査・資料読解</a>
+<a href="#coding"><span aria-hidden="true">07</span>AIによるプログラミング</a>
+<a href="#writing"><span aria-hidden="true">08</span>論文執筆・開発・バージョン管理</a></nav>
+</header>
+<section id="software" class="resource-section" aria-labelledby="software-title">
+<header class="section-heading"><p class="eyebrow">01 <span lang="en">/ 6 entries</span></p><h2 id="software-title">電波観測データの解析</h2><p>観測装置や大気などの影響を補正し、画像やスペクトルを作るためのソフトウェアです。処理が何を仮定しているかを理解しながら利用することが大切です。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="casa">
+          <h3><a href="https://casa.nrao.edu/" target="_blank" rel="noopener noreferrer"><span lang="en">CASA — Common Astronomy Software Applications</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>VLAやALMAなどの電波望遠鏡で得られたデータを解析するためのソフトウェアです。観測装置や大気などの影響を補正し、天体の画像やスペクトルを作ります。現代の電波干渉計による観測研究を支える、代表的な解析ツールです。</p>
+        </li>
+<li class="resource-item" id="miriad">
+          <h3><a href="https://www.atnf.csiro.au/computing/software/miriad/index.html" target="_blank" rel="noopener noreferrer"><span lang="en">MIRIAD</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>電波干渉計のデータ解析に長く使われてきたソフトウェアです。もともとはBIMAなどの観測データにも使われ、現在もオーストラリアのATCAをはじめとする電波干渉計の解析に利用されています。データの較正から画像合成、スペクトルの解析まで、一連の作業を行うことができます。</p>
+        </li>
+<li class="resource-item" id="aips">
+          <h3><a href="https://www.aips.nrao.edu/" target="_blank" rel="noopener noreferrer"><span lang="en">AIPS — Astronomical Image Processing System</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>電波天文学の発展を長年にわたって支えてきた解析ソフトウェアです。電波干渉計の観測データを処理するために開発され、現在もVLBIなどの解析に使われています。長い歴史を持ちながら、今なお研究の現場で役割を果たしているソフトウェアです。</p>
+        </li>
+<li class="resource-item" id="gildas">
+          <h3><a href="https://iram.fr/IRAMFR/GILDAS/" target="_blank" rel="noopener noreferrer"><span lang="en">GILDAS / CLASS</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>ミリ波・サブミリ波の観測データを解析するためのソフトウェア群です。なかでもCLASSは、分子線のスペクトルを調べるために広く利用されています。輝線の強さや幅、中心速度などを測定し、宇宙空間にある分子ガスの性質を調べることができます。</p>
+        </li>
+<li class="resource-item" id="cassis">
+          <h3><a href="https://cassis.irap.omp.eu/" target="_blank" rel="noopener noreferrer"><span lang="en">CASSIS</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天体のスペクトルに現れる分子の輝線を調べるためのソフトウェアです。分子の分光データベースを参照しながら、観測された輝線がどの分子によるものかを調べます。理論的なスペクトルとの比較を通じて、ガスの温度や分子の柱密度などを推定することもできます。</p>
+        </li>
+<li class="resource-item" id="starlink">
+          <p class="item-label">電波・サブミリ波データ処理</p>
+          <h3><a href="https://starlink.eao.hawaii.edu/starlink/WelcomePage" target="_blank" rel="noopener noreferrer">Starlink Software Collection<span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天体観測データの還元と解析を支えるソフトウェア群です。JCMTのスペクトル線や連続波の観測データを扱う際にも用いられており、観測装置と解析環境を結び付ける重要な道具です。</p>
+        </li>
+</ul>
+</section>
+<section id="visualization" class="resource-section" aria-labelledby="visualization-title">
+<header class="section-heading"><p class="eyebrow">02 <span lang="en">/ 4 entries</span></p><h2 id="visualization-title">天体画像・カタログの可視化</h2><p>観測画像や三次元データ、天体カタログを表示し、構造や数値の関係を調べるための道具です。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="ds9">
+          <h3><a href="https://ds9.si.edu/" target="_blank" rel="noopener noreferrer"><span lang="en">SAOImage DS9</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天文学で広く使われている画像表示・解析ソフトウェアです。FITS形式の観測画像を表示し、天体の位置や明るさの分布を調べることができます。異なる画像を重ね合わせたり、等高線を描いたりすることもでき、観測データを詳しく見るための基本的な道具です。</p>
+        </li>
+<li class="resource-item" id="carta">
+          <h3><a href="https://cartavis.org/" target="_blank" rel="noopener noreferrer"><span lang="en">CARTA — Cube Analysis and Rendering Tool for Astronomy</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>大容量の天体画像や、位置と速度の情報を含む三次元データを表示・解析するためのソフトウェアです。ALMAやVLAなどで得られる大きなデータも扱えるように設計されています。画像とスペクトルを行き来しながら、天体の空間構造やガスの運動を調べることができます。</p>
+        </li>
+<li class="resource-item" id="topcat">
+          <h3><a href="https://www.star.bristol.ac.uk/mbt/topcat/" target="_blank" rel="noopener noreferrer"><span lang="en">TOPCAT — Tool for OPerations on Catalogues And Tables</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>大量の天体カタログを整理し、比較するためのソフトウェアです。異なるカタログの照合や、さまざまな量の関係を示すグラフの作成を、画面上で直感的に行えます。何千、何万という天体のデータから、共通する傾向や興味深い天体を探す際に役立ちます。</p>
+        </li>
+<li class="resource-item" id="aladin">
+          <h3><a href="https://aladin.cds.unistra.fr/" target="_blank" rel="noopener noreferrer"><span lang="en">Aladin Sky Atlas</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>さまざまな望遠鏡で観測された天体画像を、同じ空の領域で比較できる天文地図です。可視光、赤外線、電波など、異なる波長の画像を重ね合わせ、天体の位置や周囲の構造を調べることができます。天体カタログとも連携しており、観測対象について多方面から情報を集めることができます。</p>
+        </li>
+</ul>
+</section>
+<section id="modeling" class="resource-section" aria-labelledby="modeling-title">
+<header class="section-heading"><p class="eyebrow">03 <span lang="en">/ 4 entries</span></p><h2 id="modeling-title">放射輸送・物理モデル</h2><p>ガスやダストと光の相互作用を計算し、モデルから観測される画像やスペクトルを予測するソフトウェアです。観測結果との比較を通じて物理的な解釈を検討できます。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="radmc-3d">
+          <h3><a href="https://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/index.php" target="_blank" rel="noopener noreferrer"><span lang="en">RADMC-3D</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>ガスやダストの中を光がどのように伝わるかを計算する、放射輸送のソフトウェアです。三次元の複雑な構造を扱うことができ、星周エンベロープや原始惑星系円盤などの研究に利用されます。物理モデルから観測される画像やスペクトルを予測し、実際の観測結果と比較することができます。</p>
+        </li>
+<li class="resource-item" id="dusty">
+          <h3><a href="https://github.com/ivezic/dusty" target="_blank" rel="noopener noreferrer"><span lang="en">DUSTY</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>星の周囲にあるダストが、星の光を吸収し、赤外線として放射する過程などを計算するソフトウェアです。年老いた星を取り巻くダストの研究にも広く使われてきました。観測された赤外線のエネルギー分布をモデルと比較することで、ダストの性質や星周エンベロープの構造を調べます。</p>
+        </li>
+<li class="resource-item" id="radex">
+          <h3><a href="https://var.sron.nl/radex/radex.php" target="_blank" rel="noopener noreferrer"><span lang="en">RADEX</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>分子がどのような励起状態にあり、どの程度の強さの輝線を放射するかを計算するソフトウェアです。温度や密度が一様なガスを仮定し、非局所熱平衡の効果を考慮した比較的簡単な放射輸送計算を行います。観測された分子線から、ガスの温度や密度などを推定する際に役立ちます。</p>
+        </li>
+<li class="resource-item" id="lime">
+          <h3><a href="https://github.com/lime-rt/lime" target="_blank" rel="noopener noreferrer"><span lang="en">LIME — Line Modeling Engine</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>三次元のガス分布を考慮して、分子の励起と放射輸送を計算するソフトウェアです。温度や密度、ガスの運動が場所によって異なるような、複雑な天体構造も扱うことができます。計算から得られる分子線の画像やスペクトルを、電波望遠鏡による観測結果と比較できます。</p>
+        </li>
+</ul>
+</section>
+<section id="python" class="resource-section" aria-labelledby="python-title">
+<header class="section-heading"><p class="eyebrow">04 <span lang="en">/ 4 entries</span></p><h2 id="python-title">Pythonによる天文・科学解析</h2><p>座標、単位、観測データ、スペクトルやデータベースをPythonで扱うためのライブラリです。解析プログラムを組み立てる際の共通の基盤になります。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="astropy">
+          <h3><a href="https://www.astropy.org/" target="_blank" rel="noopener noreferrer"><span lang="en">Astropy</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天文学の研究に必要な基本的な機能を、プログラミング言語Pythonで利用できるようにしたライブラリです。天体の座標や時刻、物理単位、FITS形式のデータなどを扱うことができます。さまざまな解析プログラムを自分で作る際の、共通の土台となるものです。</p>
+        </li>
+<li class="resource-item" id="spectral-cube">
+          <h3><a href="https://spectral-cube.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer"><span lang="en">spectral-cube</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天体の位置と周波数・速度の情報を含む、三次元の観測データをPythonで解析するためのライブラリです。必要な領域や速度範囲を取り出したり、輝線の積分強度や速度分布を計算したりできます。電波による分子ガスの観測データを扱う際に、とくに便利です。</p>
+        </li>
+<li class="resource-item" id="specutils">
+          <h3><a href="https://specutils.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer"><span lang="en">specutils</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天体のスペクトルをPythonで処理・解析するためのライブラリです。スペクトルの一部を取り出したり、輝線の強さや幅を測定したり、モデルによるフィッティングを行ったりできます。観測データから必要な物理量を取り出すための、さまざまな機能が用意されています。</p>
+        </li>
+<li class="resource-item" id="astroquery">
+          <h3><a href="https://astroquery.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer"><span lang="en">astroquery</span><span class="outward" aria-hidden="true"> ↗</span></a></h3>
+          <p>天文データベースにPythonからアクセスし、必要な情報を取得するためのライブラリです。SIMBADやVizieRなどを利用して、天体の位置や観測記録、カタログ情報を調べることができます。多数の天体について同じ情報を集めるような作業を、プログラムで自動化する際に役立ちます。</p>
+        </li>
+</ul>
+</section>
+<section id="conversation" class="resource-section" aria-labelledby="conversation-title">
+<header class="section-heading"><p class="eyebrow">05 <span lang="en">/ 6 entries</span></p><h2 id="conversation-title">対話型AI・大規模言語モデル</h2><p>問いを整理し、文章やコードのたたき台を作るための対話型サービスです。応答の正しさは、公式資料や原論文と照らし合わせて判断する必要があります。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="chatgpt">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT（OpenAI）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT（OpenAI）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>論文の読解、翻訳、文章の推敲、コードの検討、数式をめぐる議論などに利用できる対話型AIです。説明がもっともらしくても正しいとは限らないため、結論や出典は自分で確かめる必要があります。</p>
         </li>
-        <li class="resource-item" id="claude">
+<li class="resource-item" id="claude">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude（Anthropic）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://claude.ai/" target="_blank" rel="noopener noreferrer">Claude（Anthropic）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>長い文章を読み、論点の整理や文章・プログラムの検討を支援する対話型AIです。研究の問題を別の角度から考えたいとき、複数のモデルの見方を比較することにも意味があります。</p>
         </li>
-        <li class="resource-item" id="gemini">
+<li class="resource-item" id="gemini">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini（Google）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Gemini（Google）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>文章や画像などを扱いながら、調査、説明の作成、コードの検討を支援する対話型AIです。ほかのGoogleサービスと組み合わせた資料整理にも利用できます。</p>
         </li>
-        <li class="resource-item" id="deepseek">
+<li class="resource-item" id="deepseek">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>中国で開発されている大規模言語モデルを利用できるサービスです。数理的な検討やプログラミングなどで、異なるモデルの得意・不得意を比較するための選択肢になります。</p>
         </li>
-        <li class="resource-item" id="qwen">
+<li class="resource-item" id="qwen">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://chat.qwen.ai/" target="_blank" rel="noopener noreferrer">Qwen（Alibaba）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://chat.qwen.ai/" target="_blank" rel="noopener noreferrer">Qwen（Alibaba）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>Alibabaが開発する言語モデル群に接するためのサービスです。多言語の文章処理やコードの作成に利用でき、公開モデルを含む技術の進展を知るうえでも興味深い存在です。</p>
         </li>
-        <li class="resource-item" id="kimi">
+<li class="resource-item" id="kimi">
           <p class="item-label">対話型AI</p>
-          <h4><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi（Moonshot AI）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://www.kimi.com/" target="_blank" rel="noopener noreferrer">Kimi（Moonshot AI）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>中国のMoonshot AIが提供するAIアシスタントです。長い資料の読解、文章作成、情報整理など、研究作業の補助に用いることができます。</p>
         </li>
-      </ul>
-    </section>
-    <section id="research-ai" class="resource-section" aria-labelledby="research-ai-title">
-      <header class="section-heading"><p class="eyebrow">02 <span lang="en">/ 3 entries</span></p><h2 id="research-ai-title">AIによる調査・読解</h2><p>検索や手元の資料の読解を助けるサービスです。要約と元の記述を区別し、引用先や数値を一次資料で確認してください。</p></header>
-      <h3 class="group-title">AIによる調査・読解</h3>
-      <ul class="resource-grid">
-        <li class="resource-item" id="perplexity">
+</ul>
+</section>
+<section id="research-ai" class="resource-section" aria-labelledby="research-ai-title">
+<header class="section-heading"><p class="eyebrow">06 <span lang="en">/ 3 entries</span></p><h2 id="research-ai-title">AIによる情報調査・資料読解</h2><p>検索や手元の資料の読解を助けるサービスです。要約と元の記述を区別し、引用先や数値を一次資料で確認してください。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="perplexity">
           <p class="item-label">AIによる調査・読解</p>
-          <h4><a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Perplexity<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>Webを検索し、参照元とともに概要をまとめるAIサービスです。未知の話題の入口を探すには便利ですが、表示された出典が本当に回答を支えているか、原文で確認することが欠かせません。</p>
         </li>
-        <li class="resource-item" id="felo">
+<li class="resource-item" id="felo">
           <p class="item-label">AIによる調査・読解</p>
-          <h4><a href="https://felo.ai/ja/search" target="_blank" rel="noopener noreferrer">Felo<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://felo.ai/ja/search" target="_blank" rel="noopener noreferrer">Felo<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>多言語の検索結果を横断し、話題の概要を整理するAIサービスです。英語・中国語・日本語で公開された情報に触れるための入口になりますが、学術的な引用は一次資料まで戻って確認します。</p>
         </li>
-        <li class="resource-item" id="gemini-notebook">
+<li class="resource-item" id="gemini-notebook">
           <p class="item-label">AIによる調査・読解</p>
-          <h4><a href="https://notebook.google/" target="_blank" rel="noopener noreferrer">Gemini Notebook（旧NotebookLM）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://notebook.google/" target="_blank" rel="noopener noreferrer">Gemini Notebook（旧NotebookLM）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>指定した論文や資料をもとに、内容の整理や質問への回答を行うGoogleの研究支援サービスです。一般的な知識を広く尋ねるよりも、手元の文献を読み比べて理解を深めたいときに適しています。</p>
         </li>
-      </ul>
-    </section>
-    <section id="coding" class="resource-section" aria-labelledby="coding-title">
-      <header class="section-heading"><p class="eyebrow">03 <span lang="en">/ 1 entries</span></p><h2 id="coding-title">AIによるプログラミング</h2><p>コードの作成・修正を支援する道具です。解析の仮定、計算結果、公開するコードの内容については利用者自身の検証が必要です。</p></header>
-      <h3 class="group-title">AIによるプログラミング</h3>
-      <ul class="resource-grid">
-        <li class="resource-item" id="codex">
+</ul>
+</section>
+<section id="coding" class="resource-section" aria-labelledby="coding-title">
+<header class="section-heading"><p class="eyebrow">07 <span lang="en">/ 1 entries</span></p><h2 id="coding-title">AIによるプログラミング</h2><p>コードの作成・修正を支援する道具です。解析の仮定、計算結果、公開するコードの内容については利用者自身の検証が必要です。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="codex">
           <p class="item-label">AIによるプログラミング</p>
-          <h4><a href="https://chatgpt.com/codex/" target="_blank" rel="noopener noreferrer">Codex（OpenAI）<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://chatgpt.com/codex/" target="_blank" rel="noopener noreferrer">Codex（OpenAI）<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>コードや関連ファイルを読み、修正案の作成や検証を支援するコーディングエージェントです。研究用プログラムやWebサイトの開発にも利用できますが、変更差分と動作の確認は人間が担います。</p>
         </li>
-      </ul>
-    </section>
-    <section id="writing" class="resource-section" aria-labelledby="writing-title">
-      <header class="section-heading"><p class="eyebrow">04 <span lang="en">/ 2 entries</span></p><h2 id="writing-title">研究・執筆・開発</h2><p>論文の共同執筆やコードの共有を支えるサービスです。生成AIとは役割が異なりますが、研究の記録と再現性を支える基盤として紹介します。</p></header>
-      <h3 class="group-title">研究・執筆・開発</h3>
-      <ul class="resource-grid">
-        <li class="resource-item" id="overleaf">
+</ul>
+</section>
+<section id="writing" class="resource-section" aria-labelledby="writing-title">
+<header class="section-heading"><p class="eyebrow">08 <span lang="en">/ 2 entries</span></p><h2 id="writing-title">論文執筆・開発・バージョン管理</h2><p>論文の共同執筆やコードの共有を支えるサービスです。研究の記録と再現性を支える基盤として紹介します。</p></header>
+<ul class="resource-grid">
+<li class="resource-item" id="overleaf">
           <p class="item-label">研究・執筆・開発</p>
-          <h4><a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Overleaf<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>ブラウザー上でLaTeX原稿を作成・共有できるサービスです。数式、図表、文献を含む学術論文を共同で編集し、改訂を進めるときに便利です。</p>
         </li>
-        <li class="resource-item" id="github">
+<li class="resource-item" id="github">
           <p class="item-label">研究・執筆・開発</p>
-          <h4><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub<span class="outward" aria-hidden="true"> ↗</span></a></h4>
+          <h3><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub<span class="outward" aria-hidden="true"> ↗</span></a></h3>
           <p>プログラムや文章の変更履歴をGitで管理し、共同作業を進めるためのサービスです。研究用コードの再現性を高めるだけでなく、このWebサイトの公開にもGitHub Pagesを利用しています。</p>
         </li>
-      </ul>
-    </section>
-    <aside class="resource-colophon" aria-label="リンクについて"><p>各項目の名称から公式の公開元・案内へ移動できます（新しいタブで開きます）。</p><p>追加項目の情報確認：<time datetime="2026-10-24">2026年10月24日</time>。自動取得の制限があるサイトもあります。最新の公開範囲・利用条件は各公式サイトで確認してください。</p></aside>
-  </main>
-  <footer class="site-footer"><div class="footer-inner"><a href="../">リンク集の総合案内へ</a><a href="#main">ページの先頭へ ↑</a><p class="copyright">© Jun-ichi Nakashima</p></div></footer>
+</ul>
+</section>
+
+
+<aside class="resource-colophon" aria-label="リンクについて"><p>各項目の名称から公式の公開元・案内へ移動できます（新しいタブで開きます）。情報確認は2026年10月24日です。運用状況、公開範囲、利用条件は各公式サイトで確認してください。</p></aside>
+</main>
+<footer class="site-footer"><div class="footer-inner"><a href="../../">ホームへ戻る</a><a href="#main">ページの先頭へ ↑</a><p class="copyright">© Jun-ichi Nakashima</p></div></footer>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "af9dc6af89aa4a5196e4b3d14166c4e8"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
