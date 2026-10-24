@@ -1021,3 +1021,27 @@ h1 span[lang="en"] {
   .home-page .research-entries, .home-page .education-entries { display: block; }
   .home-page .research-entry, .home-page .education-entry { break-inside: avoid; }
 }
+
+/* Homepage Research Program entry: compact heading and reading columns. */
+.home-page .research-section.program-entry {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+  gap: 36px;
+  padding: 28px 0 32px;
+}
+.home-page .program-entry > div:first-child {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.home-page .program-entry-body { max-width: 46rem; }
+.home-page .program-entry-body h3 { margin: 0 0 12px; font-size: 1.4rem; font-weight: 400; line-height: 1.8; }
+.home-page .program-entry-body p { margin-bottom: 12px; }
+.home-page .program-entry-body p:last-child { margin-bottom: 0; }
+@media (max-width: 680px) {
+  .home-page .research-section.program-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 24px 0 28px;
+  }
+}
