@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="星間雲に存在する分子の種類は、どこまで既知の分子から予測できるのでしょうか。TMC-1で観測された分子の化学構造と柱密度を機械学習に結びつけ、次の観測候補を探る試みです。">
+  <title>AIは、宇宙にまだ見つかっていない分子を探せるか｜中島の研究ウォッチ｜中島淳一</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../paper-watch.css">
+</head>
+<body class="research-page watch-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="site-name" href="../../" aria-label="中島淳一 ホーム"><span lang="ja">中島淳一</span><span lang="en">Jun-ichi Nakashima</span></a>
+    <p class="site-description" lang="en">Astronomy, notes &amp; essays</p>
+  </div></header>
+  <main id="main" class="research-main" tabindex="-1">
+    <nav class="article-nav" aria-label="現在の位置"><a href="../../">ホーム</a><span aria-hidden="true"> / </span><a href="../">中島の研究ウォッチ</a><span aria-hidden="true"> / </span><span aria-current="page">天体化学・機械学習</span></nav>
+    <article aria-labelledby="article-title">
+      <header class="article-header">
+        <p class="eyebrow" lang="en">Research Watch</p>
+        <p class="article-date">記事公開：<time datetime="2026-10-24">2026年10月24日</time> · 他の研究者の論文紹介</p>
+        <h1 id="article-title">AIは、宇宙にまだ見つかっていない分子を探せるか</h1>
+        <p class="article-subtitle">TMC-1の分子構造と柱密度を結ぶニューラルネットワーク</p>
+        <p class="article-lead">宇宙には、まだ観測で見つかっていない分子がどれほどあるのでしょうか。候補を手当たり次第に探すわけにはいきません。TMC-1で知られている分子の構造と存在量をニューラルネットワークに学習させ、次に探すべき分子を選ぼうという研究です。</p>
+        <p class="paper-status">Astronomy &amp; Astrophysicsに掲載決定（著者コメント）<br><a href="https://arxiv.org/abs/2610.30842">原著を読む（arXiv）</a></p>
+      </header>
+      <div class="article-body">
+        <section aria-labelledby="section-1">
+          <h2 id="section-1">分子を文字列として表す</h2>
+          <p>おうし座の暗黒分子雲TMC-1では、さまざまな炭素鎖分子が見つかっています。しかし、化学的に作れそうな分子は膨大です。限られた望遠鏡の時間をどこへ振り向けるか。その候補を絞ることも、分子探索では重要な仕事になります。</p>
+          <p>著者らは、分子の構造を化学的な文字列表現として与え、ニューラルネットワークで柱密度との関係を学習させました。柱密度とは、視線方向に積み重なった分子の量です。分子構造だけで決まる量ではなく、温度、密度、反応の進み方など、天体の環境にも左右されます。</p>
+        </section>
+        <section aria-labelledby="section-2">
+          <h2 id="section-2">予測精度はどの程度なのか</h2>
+          <p>結果の評価では、決定係数R²が学習・検証全体で0.88、検証データでは0.51と報告されています。学習に使っていないデータでは、予測できないばらつきがまだ大きいことが分かります。AIが未知の分子の存在量を正確に言い当てた、と受け取るのは早計です。</p>
+          <p>そもそも、モデルが大きな柱密度を予測したからといって、観測で容易に見つかるとは限りません。電波で回転スペクトルを調べるなら、双極子モーメントや励起条件、観測周波数、感度も関係します。存在量の予測と、実際の検出可能性は分けて考える必要があります。</p>
+        </section>
+        <section aria-labelledby="section-3">
+          <h2 id="section-3">潜在空間を化学の地図として使う</h2>
+          <p>この研究の面白いところは、分子を単純に分類するだけでなく、似た性質をもつ分子が近くに置かれるような数値的な空間を作った点です。これを潜在空間と呼びます。既知分子の関係を地図のように表し、周辺にある未検出分子を探索候補として選んでいます。</p>
+          <p>ただし、その地図は学習に使った分子に依存します。最近発見された分子を加えると潜在空間の構造が変わるという結果は、まだ知られていない化学領域への外挿が難しいことも教えてくれます。AIが新分子の発見を保証するわけではありません。</p>
+        </section>
+        <section aria-labelledby="section-4">
+          <h2 id="section-4">星周分子サーベイへの示唆</h2>
+          <p>この方法を星周エンベロープに応用できるかも興味深い問題です。ただ、TMC-1と進化星の周囲では温度や紫外線場、元素組成が違います。同じ関係がそのまま成り立つとは思えません。それでも、環境の違いを考慮して学習と検証を行えば、分子線サーベイの候補選びに役立つ可能性があります。</p>
+        </section>
+      </div>
+      <section class="paper-information" aria-labelledby="paper-title">
+        <p class="eyebrow" lang="en">Original paper</p>
+        <h2 id="paper-title">原著・出典情報</h2>
+        <p class="paper-name" lang="en">A neural-network model to find correlations in astrochemical space</p>
+        <p class="paper-authors" lang="en">Daniel Giovanni Vargas, Darío Barreiro-Lage, Carlos Cabezas, José Cernicharo, Germán Molpeceres</p>
+        <p>arXiv:2610.30842（2026年10月）<br>Astronomy &amp; Astrophysicsに掲載決定（著者コメント）</p>
+        <p><a href="https://arxiv.org/abs/2610.30842">原著の概要・書誌情報</a> · <a href="https://arxiv.org/pdf/2610.30842">原著PDF（外部サイト）</a></p>
+        <p class="paper-note">2026年10月24日時点の公開アブストラクトと書誌情報に基づく一般向け解説です。原著全文・図を逐一精査した学術的レビューではありません。原著の図は転載せず、観測結果・理論的予測・今後の可能性を区別して記述しています。</p>
+      </section>
+      <nav class="article-return" aria-label="関連ページへの案内"><a href="../">← 中島の研究ウォッチ一覧</a><a href="../../">ホームへ戻る</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="copyright"><span aria-hidden="true">©</span> Jun-ichi Nakashima</p></div></footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "af9dc6af89aa4a5196e4b3d14166c4e8"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
