@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="宇宙で見つかっているリンを含む分子は、炭素や酸素を含む分子ほど多くありません。既知のCPラジカルが炭化水素と結びつけば、新しいリン含有分子が生まれるのでしょうか。量子化学からその可能性を探った論文です。">
+  <meta name="description" content="WillisらはCPラジカルから新しいリン含有分子ができる経路を計算し、電波探索の可能性を論じています。">
   <title>リンを含む新しい分子は、宇宙で見つかるか｜中島の研究ウォッチ｜中島淳一</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../paper-watch.css">
@@ -22,7 +22,7 @@
         <p class="article-date">記事公開：<time datetime="2026-10-24">2026年10月24日</time> · 他の研究者の論文紹介</p>
         <h1 id="article-title">リンを含む新しい分子は、宇宙で見つかるか</h1>
         <p class="article-subtitle">CPラジカルを持つ環状分子の生成経路と電波観測の可能性</p>
-        <p class="article-lead">宇宙には数多くの分子が見つかっていますが、リンを含むものはまだ限られています。そこで、すでに存在が知られているCPラジカルが、炭化水素と反応して新しい分子を作れないか。量子化学計算を使い、分子の生成と観測の可能性を検討した論文です。</p>
+        <p class="article-lead">Reace H. J. Willisらは、既知のCPラジカルと炭化水素の反応から、新しいリン含有分子ができる可能性を量子化学計算で調べています。この論文は、形成経路と分光学的な性質を予測した理論研究です。対象分子が宇宙で検出されたという報告ではありません。</p>
         <p class="paper-status">プレプリント（査読・出版状況は本記事では未確認）<br><a href="https://arxiv.org/abs/2610.30509">原著を読む（arXiv）</a></p>
       </header>
       <div class="article-body">
@@ -33,17 +33,23 @@
         </section>
         <section aria-labelledby="section-2">
           <h2 id="section-2">小さな環状分子では形成経路が有望</h2>
-          <p>計算では、環状のc-C₃H₂とCPラジカルから、c-C₃HCPができる反応経路が低温の気相環境でも有望だと示されました。反応に大きなエネルギーの障壁がないと予測される点が重要です。出発物質となるc-C₃H₂やCPは、星周シェルでも検出されています。</p>
+          <p>著者らの計算では、環状のc-C₃H₂とCPラジカルからc-C₃HCPができる経路に、反応物のエネルギーを上回る障壁はないと予測されています。低温の気相環境でも形成し得るという議論です。著者らは、出発物質のc-C₃H₂とCPが星周シェルで検出されていることも、探索の動機として挙げています。</p>
           <p>もっとも、作れる反応経路が見つかったからといって、分子が大量に存在するとは限りません。別の反応で壊れてしまうかもしれませんし、ほかの分子が先に作られる可能性もあります。実際の存在量を求めるには、反応の速さまで含めた化学ネットワークの計算が必要です。</p>
+          <figure class="research-figure">
+            <a href="../images/phosphaethynyl-molecules/reaction-energy.webp" aria-label="原著の図1を拡大"><img src="../images/phosphaethynyl-molecules/reaction-energy.webp" width="1600" height="717" loading="lazy" decoding="async" alt="c-C₃H₂とCPの反応に沿ったエネルギーと分子構造。中間体を経てc-C₃HCPに至る計算経路を示す。"></a>
+            <figcaption><span class="figure-number">図1（原著 Figure 1）</span>著者らが計算したc-C₃H₂とCPの反応のエネルギー図です。数値は反応物を基準にしたエネルギー（kcal/mol）です。橙色と濃灰色の実線は異なる中間体を経る経路、黒い破線は中間体間の水素移動を表します。色の異なる数値には計算法の違いも含まれます。反応物を上回る障壁がないという予測を示す図で、実際の天体内の反応速度や存在量を測ったものではありません。
+              <span class="figure-source">出典：Reace H. J. Willis, Vincent J. Esposito, Thomas H. Speak, Ilsa R. Cooke &amp; Ryan C. Fortenberry（2026）。© 著者。<a href="https://arxiv.org/html/2610.30509v1#S2.F1">原著図・キャプション（arXiv v1）</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。PNGを1655 × 742から1600 × 717 pxへ縮小し、可逆WebPで保存。図の範囲・内容は保持。日本語の解説は本サイトによります。</span>
+            </figcaption>
+          </figure>
         </section>
         <section aria-labelledby="section-3">
           <h2 id="section-3">ベンゼンやPAHまで広げるには</h2>
-          <p>著者らはさらに、CPとベンゼンの反応や、ナフタレンを含む大きな芳香族分子への拡張も調べています。ただし、ベンゼンへの付加で越えなければならないエネルギー障壁の有無は、計算法によって結論が変わります。小さな環状分子でうまくいったからといって、PAHでも同じ反応が進むと決まったわけではありません。</p>
-          <p>検出方法にも難しさがあります。赤外線の振動スペクトルは信号が弱かったり、ほかのPAHの特徴と重なったりする可能性があります。一方、予測される電気双極子モーメントが大きいため、回転遷移を使った電波観測には期待が持てます。</p>
+          <p>著者らは、CPとベンゼンの反応、およびCPを結び付けたナフタレンの分光学的性質も調べています。ただし、ベンゼンへの付加で反応物を上回るエネルギー障壁があるかどうかは、計算法によって結論が異なります。小さな環状分子の形成経路から、PAH全般で同じ反応が進むと断定することはできません。</p>
+          <p>著者らは、赤外線の振動スペクトルは弱く、ほかのPAHの特徴と重なるため、検出が難しいと予測しています。一方、計算された電気双極子モーメントが大きいことから、回転遷移による電波探索には可能性があると論じています。これは検出方法の予測であり、検出そのものではありません。</p>
         </section>
         <section aria-labelledby="section-4">
           <h2 id="section-4">実際の検出へ進むには</h2>
-          <p>ただし、望遠鏡で探すには、どの周波数に線が出るかを十分正確に知る必要があります。高精度な理論計算や実験室分光による周波数の確認が、次の段階になるでしょう。まだ見つかっていない分子を、化学反応の可能性と分光学の両方から絞り込む研究です。</p>
+          <p>この論文は、化学反応の可能性と分光定数の予測を組み合わせ、観測候補を提示しています。望遠鏡による同定には、精度の十分な遷移周波数と観測スペクトルとの照合が必要です。形成経路が理論上有望であることと、天体内の存在量や実際の検出が確定していることは区別されます。</p>
         </section>
       </div>
       <section class="paper-information" aria-labelledby="paper-title">
@@ -53,7 +59,7 @@
         <p class="paper-authors" lang="en">Reace H. J. Willis, Vincent J. Esposito, Thomas H. Speak, Ilsa R. Cooke, Ryan C. Fortenberry</p>
         <p>arXiv:2610.30509（2026年10月）<br>プレプリント（査読・出版状況は本記事では未確認）</p>
         <p><a href="https://arxiv.org/abs/2610.30509">原著の概要・書誌情報</a> · <a href="https://arxiv.org/pdf/2610.30509">原著PDF（外部サイト）</a></p>
-        <p class="paper-note">2026年10月24日時点の公開アブストラクトと書誌情報に基づく一般向け解説です。原著全文・図を逐一精査した学術的レビューではありません。原著の図は転載せず、観測結果・理論的予測・今後の可能性を区別して記述しています。</p>
+        <p class="paper-note">2026年10月24日確認。原著の公開本文と採用図を照合し、研究結果・著者らの解釈・検証上の限界を区別した一般向け解説です。図は当該arXiv v1に明示されたライセンスに基づき掲載しています。<a href="../figure-rights.md">図版の権利・加工記録</a> · <a href="../sources.md">出典記録</a>。</p>
       </section>
       <nav class="article-return" aria-label="関連ページへの案内"><a href="../">← 中島の研究ウォッチ一覧</a><a href="../../">ホームへ戻る</a></nav>
     </article>

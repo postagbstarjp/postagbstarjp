@@ -1,8 +1,8 @@
 # 中島の研究ウォッチ：出典・図版の利用記録
 
-確認日：2026年10月20日。以下は各記事で使用した原著の版と図の記録です。原稿PDFそのものは再配布しません。
+初回3記事の確認日：2026年10月20日。新規6記事の権利確認・文体修正：2026年10月24日。以下は各記事で使用した原著の版と図の記録です。原稿PDFそのものは再配布しません。
 
-## 共通の利用条件
+## 初回3記事の共通の利用条件
 
 3本とも使用した **arXiv v1の概要ページのライセンスリンク、およびHTML本文のライセンス表示がCC BY 4.0** であることを確認しました。arXivの非独占的配布ライセンスを転載許諾として扱ったものではありません。
 
@@ -50,19 +50,30 @@
 
 既存プロフィールのリンク1箇所のみを[JPL公式記事](https://www.jpl.nasa.gov/news/nasa-team-probes-peculiar-age-defying-star/)へ変更。NASA旧掲載と題名、2016年8月29日の日付、対象IRAS 19312+1950、CordinerらによるSpitzer/Herschel研究紹介が対応します。本文と主要画像はブラウザで確認しました。写真は本サイトへ転載していません。2016年の原始星という解釈を、現在確定した分類へ書き換えていません。
 
-## 2026年10月24日追加の解説6本（図版転載なし）
+## 2026年10月24日追加の解説6本：図版確認後の現状
 
-以下の6記事は公開アブストラクト・書誌情報に基づく一般向け解説です。原著PDF全文の逐次検証や原著図の転載許諾確認は行っていないため、図版画像はサイトに再掲載していません。記事の科学的な判断は原著の記述と今後の検証を区別しています。
+初稿では6本とも図を転載していませんでした。今回、各論文自身のライセンスを個別確認し、以下の4図を追加しました。出版社版の無料閲覧や掲載決定だけを転載根拠にはしていません。タイトル・著者・採用図の取得元・権利根拠・加工・attribution・不採用理由の詳細は[figure-rights.md](./figure-rights.md)に記録しています。
 
-- [arXiv:2610.29323](https://arxiv.org/abs/2610.29323) — *Enhanced Mass Transfer from Extended Shock-Supported Stellar Chromospheres*（Soumyadeep Bhattacharjee, Jim Fuller, Kareem El-Badry）。プレプリント・PASP査読後の改訂段階（著者コメント）。図版転載なし。
-- [arXiv:2610.30441](https://arxiv.org/abs/2610.30441) — *JWST observations of the planetary nebula NGC 6302 IV: PAH spectral characteristics, formation and evolution*（Nicholas Clark et al.）。Monthly Notices of the Royal Astronomical Society・2026年10月21日オンライン公開の受理原稿（最終巻号は未確認）。図版転載なし。[出版社版](https://doi.org/10.1093/mnras/stag1992)。
-- [arXiv:2610.30842](https://arxiv.org/abs/2610.30842) — *A neural-network model to find correlations in astrochemical space*（Daniel Giovanni Vargas, Darío Barreiro-Lage, Carlos Cabezas, José Cernicharo, Germán Molpeceres）。Astronomy & Astrophysicsに掲載決定（著者コメント）。図版転載なし。
-- [arXiv:2610.28917](https://arxiv.org/abs/2610.28917) — *KROME-X: a GPU-ready library for chemistry and microphysics in astrophysical simulations*（Alessandro Lupi, Tommaso Grassi, Stefano Bovino）。プレプリント・Astronomy & Astrophysicsへ投稿（著者コメント）。図版転載なし。
-- [arXiv:2610.28746](https://arxiv.org/abs/2610.28746) — *Ammonia Fitting of Multiple Velocity Components in High-Mass Star-Forming Regions*（T. Withers et al.）。The Astrophysical Journalに掲載決定（巻・論文番号・出版社DOIは未確認）。図版転載なし。
-- [arXiv:2610.30509](https://arxiv.org/abs/2610.30509) — *A Potential New Dimension of Astrophysical Aromatic Functionalization: Phosphaethynyl (CP) Derivatives*（Reace H. J. Willis, Vincent J. Esposito, Thomas H. Speak, Ilsa R. Cooke, Ryan C. Fortenberry）。プレプリント（査読・出版状況は本記事では未確認）。図版転載なし。
+| 記事 | 原著 | 図版と利用条件 |
+| --- | --- | --- |
+| shock-chromosphere-mass-transfer | [2610.29323v1](https://arxiv.org/abs/2610.29323v1) | 図なし。非独占配布ライセンスのみ、個別転載許諾を確認できず。PASP査読後の改訂段階（著者コメント）。 |
+| ngc6302-pah-formation | [2610.30441v1](https://arxiv.org/abs/2610.30441v1) | Figure 2、CC BY 4.0。原著4領域のスペクトル。MNRAS受理原稿、[DOI: 10.1093/mnras/stag1992](https://doi.org/10.1093/mnras/stag1992)は保持。 |
+| neural-astrochemistry-tmc1 | [2610.30842v1](https://arxiv.org/abs/2610.30842v1) | 図なし。非独占配布ライセンスのみ。A&A掲載決定の著者コメントを図の許諾とみなさず。 |
+| krome-x-astrochemistry | [2610.28917v1](https://arxiv.org/abs/2610.28917v1) | Figure 3、CC BY 4.0。計算時間の比較。A&A投稿（著者コメント）。 |
+| ammonia-multiple-velocity-components | [2610.28746v1](https://arxiv.org/abs/2610.28746v1) | Figure 2、CC BY-SA 4.0。M17の1〜3成分フィット。ApJ掲載決定、巻・記事番号・出版社DOIは未確認のまま。 |
+| phosphaethynyl-molecules | [2610.30509v1](https://arxiv.org/abs/2610.30509v1) | Figure 1、CC BY 4.0。c-C3H2 + CPの反応エネルギー。プレプリント、査読・出版状況は未確認のまま。 |
+
+## 全9記事の研究主体・文体の点検
+
+全9記事のリード・本文の方法、結果、解釈、留保を点検し、研究主体を原著著者へ明示しました。一般的な物理の説明と、原著の結果、紹介上の補足を区別しています。特にTMC-1のモデルの星周環境への応用、NH3解析の星周ガスへの類推は、原著の検証結果と誤読されないよう対象範囲を明示しました。既存の数値・出版状況・DOIは保持しています。
+
+- 「これまでは…注目してきた外層大気の物理」→「この論文が示すのは…理論的な可能性です」。紹介者の研究歴のように読める表現を除去。
+- 「さらに計算法をMESAへ実装し…調べています」→「著者らは処方をMESAへ実装し…調べています」。研究主体を明示。
+- 「自分が解きたい問題で性能を比較する」→「この論文の結果は、GPUを使えば常に高速化できることを意味しません」。原著の試験条件に議論を戻す。
+- 「次に必要なのは、弧そのものの分光観測でしょう」→「著者は弧の分光観測を今後の検証として挙げており…」。原著の提案と紹介者の意見を混同しない。
 
 ## 2026年10月24日：書誌情報・文体の改訂記録
 
-研究ウォッチ全9記事の本文を、日本語エッセイ第2稿の説明順序や言い回しを参考に推敲。著者本人の未確認の経験談、直接の研究判断を創作せず、観測結果・モデル解釈・留保を区別する。既存の図版・ライセンス表示・原著へのリンクは維持。
+初稿改訂時には、研究ウォッチ全9記事の本文を日本語エッセイ第2稿の説明順序や言い回しを参考に推敲。今回の研究主体の再点検と図版追加は上記の記録を参照。著者本人の未確認の経験談、直接の研究判断を創作せず、観測結果・モデル解釈・留保を区別する。既存の図版・ライセンス表示・原著へのリンクは維持。
 
 既存3本の正式出版を再調査。VX Sgr（ApJ投稿・査読中）、Vy 2-2（A&A掲載決定、巻号・出版社DOI未確認）、ALMA2040（ホワイトペーパー）は、2026年10月24日現在、補完できる巻・論文番号を確認できなかったため推測で追記しない。新規解説のうちNGC 6302はMNRASの受理原稿オンライン公開、DOI 10.1093/mnras/stag1992 を明記。NH₃の複数成分解析論文はApJ掲載決定の記載を反映し、巻号・DOIは未確認とした。

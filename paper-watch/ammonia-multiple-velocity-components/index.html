@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="観測された分子線の幅が広いと、ガスの乱流や内部運動が強いと解釈したくなります。しかし、異なる速度で動く複数のガスが視線上で重なっているだけかもしれません。アンモニアの観測を使い、その違いを体系的に調べた研究です。">
+  <meta name="description" content="Withersらはアンモニアの複数速度成分を分離し、重なりを考慮すると個々のガスの線幅が小さくなると報告しています。">
   <title>広い分子線は、本当にガスが激しく動いているからか｜中島の研究ウォッチ｜中島淳一</title>
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../paper-watch.css">
@@ -22,7 +22,7 @@
         <p class="article-date">記事公開：<time datetime="2026-10-24">2026年10月24日</time> · 他の研究者の論文紹介</p>
         <h1 id="article-title">広い分子線は、本当にガスが激しく動いているからか</h1>
         <p class="article-subtitle">アンモニア分子線に重なる複数の速度成分を分離する</p>
-        <p class="article-lead">分子線のスペクトルが幅広く見えると、ガスの運動が激しいのだと考えたくなります。しかし、本当に一つのガスが大きな速度分散を持っているのでしょうか。少しずつ違う速度のガスが重なっているだけかもしれません。この論文は、NH₃の観測からその違いを調べています。</p>
+        <p class="article-lead">T. Withersらは、大質量星が生まれる領域のアンモニア（NH₃）スペクトルを解析し、一つの広い線に見える信号を複数の速度成分へ分けています。この論文では、成分の重なりを考慮すると、個々のガスの線幅の推定がどのように変わるかを調べています。</p>
         <p class="paper-status">The Astrophysical Journalに掲載決定（巻・論文番号・出版社DOIは未確認）<br><a href="https://arxiv.org/abs/2610.28746">原著を読む（arXiv）</a></p>
       </header>
       <div class="article-body">
@@ -34,16 +34,22 @@
         <section aria-labelledby="section-2">
           <h2 id="section-2">巨大分子雲11個の観測を調べた</h2>
           <p>著者らはGreen Bank TelescopeのKEYSTONEサーベイから、距離約0.7〜2.7 kpcにある11個の巨大分子雲を解析しました。NH₃ (1,1)のスペクトルに最大三つの速度成分を同時に当てはめ、それぞれの中心速度や速度分散を地図にしています。</p>
-          <p>すると、NH₃を検出してフィットできた画素の約13％で、複数の速度成分が見つかりました。それらは主に分子雲の中心部など、密度が高く大質量星形成が進む場所に分布していました。ガスの構造が複雑な領域ほど、複数の成分が重なって見えるわけです。</p>
+          <p>著者らは、NH₃を検出してフィットできた画素の約13％で複数の速度成分を報告しています。それらは主に分子雲の中心部など、大質量星形成と関わる密度の高い領域に分布しています。ただし、明るい領域ほど複数成分を検出しやすいという選択効果も、原著では議論されています。</p>
+          <figure class="research-figure">
+            <a href="../images/ammonia-multiple-velocity-components/velocity-components.svg" aria-label="原著の図2を拡大"><img src="../images/ammonia-multiple-velocity-components/velocity-components.svg" width="429" height="275" loading="lazy" decoding="async" alt="M17の同じアンモニアスペクトルを、上から一成分・二成分・三成分のモデルで比較した図。"></a>
+            <figcaption><span class="figure-number">図1（原著 Figure 2）</span>著者らがM17の一つの画素で比較したNH₃スペクトルです。上段は一成分、中段は二成分、下段は三成分のフィットで、成分を分けると推定される線幅も変わります。これは全領域の代表値ではなく具体例です。衛星線群の強度にはモデルとのずれも残り、原著では超微細構造の強度異常として議論されています。
+              <span class="figure-source">出典：T. Withers et al.（2026）。© 著者。<a href="https://arxiv.org/html/2610.28746v1#S3.F2">原著図・キャプション（arXiv v1）</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>。原著HTMLのSVGを無改変で複製。表示サイズのみCSSで調整。日本語の解説は本サイトによります。</span>
+            </figcaption>
+          </figure>
         </section>
         <section aria-labelledby="section-3">
           <h2 id="section-3">小さくなった線幅の意味</h2>
-          <p>複数成分がある画素では、成分ごとに分けて測った線幅の中央値が、一成分だけでフィットした場合の約1.4分の1になりました。これは重要な違いです。ただし、すべてのスペクトルの線幅に一律の補正をかければよい、という意味ではありません。雲による差も大きいからです。</p>
-          <p>速度の違う成分が見つかったとしても、それだけでガスが落下しているとか、流出しているとかいう結論にはなりません。空間分布や別の分子線と比較し、実際にどんな運動が起こっているかを考える必要があります。</p>
+          <p>著者らは、複数成分がある画素では、成分ごとの線幅の中央値が一成分フィットの場合の約1.4分の1になると報告しています。ただし、雲ごとの差も大きく、すべてのスペクトルへ一律の補正をかけられるという結果ではありません。</p>
+          <p>この論文が分離しているのは、視線方向に重なった速度成分です。それだけでガスの落下や流出を確定したものではありません。著者らは、分離した速度情報を用いて、今後それらの組織的な運動を詳しく調べられると述べています。</p>
         </section>
         <section aria-labelledby="section-4">
           <h2 id="section-4">星周エンベロープにも通じる問題</h2>
-          <p>この話は星形成領域だけに限りません。星周エンベロープでも、複雑な分子線を一つの成分で説明しようとすると、本来の速度構造を見誤る可能性があります。スペクトルの幅という、一見分かりやすい観測量にも、解釈の難しさが潜んでいるのです。</p>
+          <p>この研究の対象は星形成領域です。星周エンベロープでも成分の重なりには注意が必要ですが、本論文が星周ガスの速度構造を検証したわけではありません。著者らの結果は、広い線幅をそのまま一つのガスの激しい運動とみなす前に、複数成分の可能性を調べる重要性を示しています。</p>
         </section>
       </div>
       <section class="paper-information" aria-labelledby="paper-title">
@@ -53,7 +59,7 @@
         <p class="paper-authors" lang="en">T. Withers et al.</p>
         <p>arXiv:2610.28746（2026年10月）<br>The Astrophysical Journalに掲載決定（巻・論文番号・出版社DOIは未確認）</p>
         <p><a href="https://arxiv.org/abs/2610.28746">原著の概要・書誌情報</a> · <a href="https://arxiv.org/pdf/2610.28746">原著PDF（外部サイト）</a></p>
-        <p class="paper-note">2026年10月24日時点の公開アブストラクトと書誌情報に基づく一般向け解説です。原著全文・図を逐一精査した学術的レビューではありません。原著の図は転載せず、観測結果・理論的予測・今後の可能性を区別して記述しています。</p>
+        <p class="paper-note">2026年10月24日確認。原著の公開本文と採用図を照合し、研究結果・著者らの解釈・検証上の限界を区別した一般向け解説です。図は当該arXiv v1に明示されたライセンスに基づき掲載しています。<a href="../figure-rights.md">図版の権利・加工記録</a> · <a href="../sources.md">出典記録</a>。</p>
       </section>
       <nav class="article-return" aria-label="関連ページへの案内"><a href="../">← 中島の研究ウォッチ一覧</a><a href="../../">ホームへ戻る</a></nav>
     </article>
